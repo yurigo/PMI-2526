@@ -215,54 +215,7 @@ Los contenedores son elementos genéricos que se utilizan para agrupar y aplicar
 <p>Lorem ipsum <span>dolor</span> sit amet</p>
 ```
 
-### 5. Introducción a CSS (Estilos en Línea)
-
-**CSS (Cascading Style Sheets)** es el lenguaje que se utiliza para describir la presentación visual de documentos HTML. CSS controla los colores, fuentes, espaciados, diseño y toda la apariencia visual de una página web.
-
-#### Estilos en Línea
-
-Los estilos en línea se aplican directamente a elementos HTML usando el atributo `style`. Aunque no es la mejor práctica para proyectos grandes, es útil para estilos rápidos o específicos.
-
-**Sintaxis:**
-
-```html
-<elemento style="propiedad: valor; otra-propiedad: valor;">Contenido</elemento>
-```
-
-**Ejemplo:**
-
-```html
-<span style="color: white; background-color: red;">¡Texto destacado!</span>
-```
-
-#### Estilos en el `<head>`
-
-Una mejor práctica es definir estilos en la sección `<head>` usando la etiqueta `<style>`:
-
-**Ejemplo:**
-
-```html
-<head>
-  <style>
-    span {
-      color: white;
-      background-color: red;
-    }
-  </style>
-</head>
-```
-
-**Propiedades CSS comunes:**
-
-- **`color`**: Color del texto
-- **`background-color`**: Color de fondo
-- **`font-size`**: Tamaño de la fuente
-- **`font-weight`**: Grosor de la fuente (normal, bold)
-- **`text-align`**: Alineación del texto (left, center, right)
-- **`margin`**: Espacio exterior
-- **`padding`**: Espacio interior
-
-### 6. Enlaces Externos y Atributos
+### 5. Enlaces Externos y Atributos
 
 #### Enlaces a Sitios Externos
 
@@ -295,7 +248,7 @@ Los enlaces internos conectan diferentes páginas dentro del mismo sitio:
 <a href="./index.html">Volver a la página principal</a>
 ```
 
-### 7. Elementos Multimedia (Audio y Video)
+### 6. Elementos Multimedia (Audio y Video)
 
 HTML5 introduce soporte nativo para multimedia sin necesidad de plugins externos.
 
