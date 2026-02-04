@@ -179,7 +179,34 @@ Todo documento HTML sigue una estructura estándar que es reconocida por todos l
 
 ## Ejemplo
 
-TBD
+### Hello World - Curriculum Vitae
+
+En el directorio `examples/helloworld/` encontrarás un ejemplo práctico que implementa una página HTML básica de un currículum vitae (CV). Este ejemplo demuestra los conceptos fundamentales aprendidos en esta sesión.
+
+**Archivos del ejemplo:**
+
+- `index.html`: Página principal del CV con estructura HTML completa
+- `hola/mundo.html`: Archivo de apoyo que muestra la anatomía básica de una etiqueta HTML
+
+**Características implementadas:**
+
+- Estructura completa de documento HTML5 con `<!DOCTYPE html>`, `<html>`, `<head>` y `<body>`
+- Uso de metaetiquetas para configuración (`charset`, `viewport`)
+- Jerarquía de encabezados (`<h1>`, `<h2>`, `<h3>`)
+- Navegación interna usando enlaces con anclas (`<a href="#datospersonales">`)
+- Secciones organizadas con IDs para facilitar la navegación
+- Párrafos de texto (`<p>`) con contenido formateado
+- Énfasis en texto usando `<strong>`
+
+**Cómo visualizar el ejemplo:**
+
+1. Abre VS Code y navega al directorio del proyecto
+2. Abre el archivo `sessions/session01/examples/helloworld/index.html`
+3. Haz clic derecho en `index.html`
+4. Selecciona "Open with Live Server"
+5. La página se abrirá en tu navegador predeterminado
+
+Este ejemplo te permite ver en práctica cómo se estructura un documento HTML real y cómo interactúan las diferentes etiquetas para crear una página web funcional.
 
 ## Recursos Adicionales
 
