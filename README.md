@@ -17,5 +17,7 @@ PMI-2526/
 ├── README.md
 └── sessions/
     └── session01/          # Introducción a Web
-        └── README.md
+        ├── README.md
+        └── examples/
+            └── helloworld/ # Ejemplo básico de HTML
 ```
