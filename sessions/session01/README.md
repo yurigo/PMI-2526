@@ -177,9 +177,9 @@ Todo documento HTML sigue una estructura estándar que es reconocida por todos l
 - **`<p>`**: Define párrafos de texto. Los navegadores añaden automáticamente espacios antes y después. Es el elemento más utilizado para contenido textual.
 - **`<a>`**: Define hipervínculos (enlaces). El atributo `href` especifica la URL destino. Ejemplo: `<a href="https://ejemplo.com">Haz clic aquí</a>`. Los enlaces son fundamentales para la navegación web.
 
-## Proyectos
+## Ejemplo
 
-_(Por añadir en futuras sesiones)_
+TBD
 
 ## Recursos Adicionales
 
