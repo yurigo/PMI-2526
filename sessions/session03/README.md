@@ -603,7 +603,7 @@ En el directorio `examples/html5/` encontrarás un ejemplo práctico que impleme
 - **CSS integrado**: Estilos que demuestran la diferencia entre elementos block e inline
 - **Footer con redes sociales**: Enlaces externos con SVG icons y `target="_blank"`
 - **Aside flotante**: Barra lateral con contenido complementario
-- **Tablas e imágenes**: Reutilización de conceptos de Session 02
+- **Tablas e imágenes**: Reutilización de conceptos de Sesión 02
 
 **Ejemplo de uso de tags semánticos:**
 
@@ -651,9 +651,9 @@ En el directorio `examples/html5/` encontrarás un ejemplo práctico que impleme
 5. La página se abrirá en tu navegador predeterminado
 6. Prueba la navegación por anclas y observa cómo funcionan los elementos semánticos
 
-**Comparación con Sessions anteriores:**
+**Comparación con Sesiones anteriores:**
 
-Session 03 introduce el concepto fundamental de **HTML semántico**, reemplazando los genéricos `<div>` por elementos con significado:
+Sesión 03 introduce el concepto fundamental de **HTML semántico**, reemplazando los genéricos `<div>` por elementos con significado:
 
 - En lugar de `<div id="header">`, usamos `<header>`
 - En lugar de `<div id="nav">`, usamos `<nav>`
