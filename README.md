@@ -11,6 +11,7 @@ Programación de Medios Interactivos (PMI) es una asignatura fundamental que int
 | 1   | Sesión 01 - Introducción a Web | Introducción a la asignatura, Visual Studio Code, Arquitectura cliente-servidor, Live Server, Introducción a HTML, Estructura básica de documentos HTML, Etiquetas principales | -         |
 | 2   | Sesión 02 - HTML Avanzado      | Imágenes, Listas (ordenadas y desordenadas), Tablas, Contenedores (div y span), Enlaces externos, Elementos multimedia (audio y video)                                         | -         |
 | 3   | Sesión 03 - HTML5 Semántico    | Elementos block vs inline, Atributos generales (id, class, title), Etiquetas semánticas HTML5 (header, main, footer, nav, aside, section, article)                             | -         |
+| 4   | [Sesión 04 - Introducción a CSS](./sessions/session04/) | CSS Places (Inline, Internal, External), Selectores CSS (Tag, Id, Class, Multiple, Nested, Pseudo-Classes), Propiedades CSS (font-family, font-size, line-height, font-weight, font-style, background-color, color), Google Fonts, Unidades CSS (px, rem, em) | -         |
 
 ## Estructura del Repositorio
 
@@ -26,10 +27,12 @@ PMI-2526/
     │   ├── README.md
     │   └── examples/
     │       └── helloworld-2/   # CV con imágenes, tablas y multimedia
-    └── session03/              # HTML5 Semántico
-        ├── README.md
-        └── examples/
-            └── html5/          # CV con etiquetas semánticas HTML5
+    ├── session03/              # HTML5 Semántico
+    │   ├── README.md
+    │   └── examples/
+    │       └── html5/          # CV con etiquetas semánticas HTML5
+    └── session04/              # Introducción a CSS
+        └── README.md
 ```
 
 ## Herramientas
