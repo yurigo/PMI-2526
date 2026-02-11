@@ -1,6 +1,6 @@
 # Sesión 04 - Introducción a CSS
 
-**Fecha:** TBD
+**Fecha:** 11 de Febrero de 2026
 
 ## Contenidos de la Sesión
 
@@ -171,6 +171,10 @@ El orden importa: los estilos se aplican en cascada, los últimos pueden sobresc
 
 Los selectores CSS son patrones que se utilizan para seleccionar y aplicar estilos a elementos HTML específicos.
 
+#### Selector universal (universal Selector)
+
+TBD
+
 #### Selector de Etiqueta (Tag Selector)
 
 Selecciona todos los elementos de un tipo específico de etiqueta HTML.
@@ -211,46 +215,7 @@ a {
 - Es el selector más básico y general
 - Útil para estilos base que quieres en todos los elementos del mismo tipo
 
-#### Selector de ID (Id Selector)
 
-Selecciona un elemento específico mediante su atributo `id`. El ID debe ser único en toda la página.
-
-**Sintaxis:**
-
-```css
-#nombreId {
-  propiedad: valor;
-}
-```
-
-**Ejemplo HTML:**
-
-```html
-<div id="header">Cabecera Principal</div>
-<p id="intro">Párrafo de introducción</p>
-```
-
-**Ejemplo CSS:**
-
-```css
-#header {
-  background-color: navy;
-  color: white;
-  padding: 20px;
-}
-
-#intro {
-  font-size: 18px;
-  font-weight: bold;
-}
-```
-
-**Características:**
-
-- Se denota con el símbolo `#` seguido del nombre del ID
-- Solo puede aplicarse a un elemento (los IDs son únicos)
-- Tiene alta especificidad
-- Útil para elementos únicos en la página
 
 #### Selector de Clase (Class Selector)
 
@@ -293,6 +258,48 @@ Selecciona elementos mediante su atributo `class`. Múltiples elementos pueden c
 - Es el selector más usado y versátil
 - Permite reutilización de estilos
 - Especificidad media
+
+#### Selector de ID (Id Selector)
+
+Selecciona un elemento específico mediante su atributo `id`. El ID debe ser único en toda la página.
+
+**Sintaxis:**
+
+```css
+#nombreId {
+  propiedad: valor;
+}
+```
+
+**Ejemplo HTML:**
+
+```html
+<div id="header">Cabecera Principal</div>
+<p id="intro">Párrafo de introducción</p>
+```
+
+**Ejemplo CSS:**
+
+```css
+#header {
+  background-color: navy;
+  color: white;
+  padding: 20px;
+}
+
+#intro {
+  font-size: 18px;
+  font-weight: bold;
+}
+```
+
+**Características:**
+
+- Se denota con el símbolo `#` seguido del nombre del ID
+- Solo puede aplicarse a un elemento (los IDs son únicos)
+- Tiene alta especificidad
+- Útil para elementos únicos en la página
+
 
 #### Selectores Múltiples (Multiple Selectors)
 
@@ -398,91 +405,6 @@ h1 ~ p {
   color: gray;
 }
 ```
-
-#### Pseudo-Clases (Pseudo-Classes)
-
-Las pseudo-clases son palabras clave que se añaden a los selectores para especificar un estado especial del elemento.
-
-**Sintaxis:**
-
-```css
-selector:pseudo-clase {
-  propiedad: valor;
-}
-```
-
-**Pseudo-clases más comunes:**
-
-**Estados de enlaces:**
-
-```css
-/* Estado normal del enlace */
-a:link {
-  color: blue;
-}
-
-/* Enlace ya visitado */
-a:visited {
-  color: purple;
-}
-
-/* Cuando el cursor está sobre el enlace */
-a:hover {
-  color: red;
-  text-decoration: underline;
-}
-
-/* Cuando el enlace está siendo clickeado */
-a:active {
-  color: orange;
-}
-```
-
-**Estados de interacción:**
-
-```css
-/* Cuando un elemento tiene el foco (ej: input) */
-input:focus {
-  border-color: blue;
-  outline: 2px solid lightblue;
-}
-
-/* Cuando el cursor está sobre un elemento */
-button:hover {
-  background-color: darkblue;
-  cursor: pointer;
-}
-```
-
-**Selectores estructurales:**
-
-```css
-/* Primer hijo */
-li:first-child {
-  font-weight: bold;
-}
-
-/* Último hijo */
-li:last-child {
-  border-bottom: none;
-}
-
-/* Elemento n-ésimo */
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-tr:nth-child(odd) {
-  background-color: white;
-}
-```
-
-**Características:**
-
-- Se denotan con `:` seguido del nombre de la pseudo-clase
-- Seleccionan elementos en estados específicos
-- `:hover` es la más utilizada para interactividad
-- Esenciales para crear interfaces interactivas sin JavaScript
 
 #### Práctica con CSS Diner
 
@@ -1243,34 +1165,14 @@ Recrear un cuadrado naranja centrado en un fondo azul
 - [CSS Battle Solutions](https://github.com/topics/cssbattle) - Soluciones en GitHub
 - [CSS Battle Tips](https://cssbattle.dev/tips) - Consejos y técnicas
 
-### Otros Recursos Útiles
-
-**Documentación:**
-
-- [MDN Web Docs - CSS](https://developer.mozilla.org/es/docs/Web/CSS) - Documentación completa de CSS
-- [CSS Tricks](https://css-tricks.com/) - Tutoriales y guías
-- [Web.dev - Learn CSS](https://web.dev/learn/css/) - Curso completo de Google
-
-**Herramientas:**
-
-- [Can I Use](https://caniuse.com/) - Compatibilidad de propiedades CSS
-- [CSS Gradient Generator](https://cssgradient.io/) - Generador de gradientes
-- [ColorHunt](https://colorhunt.co/) - Paletas de colores
-
-**Juegos y práctica:**
-
-- [Flexbox Froggy](https://flexboxfroggy.com/#es) - Aprender Flexbox jugando
-- [Grid Garden](https://cssgridgarden.com/#es) - Aprender Grid jugando
-- [CSS Diner](https://flukeout.github.io/) - Practicar selectores
-
 ## Resumen
 
 En esta sesión hemos aprendido:
 
 - ✅ Qué es CSS y por qué es fundamental en desarrollo web
 - ✅ Los tres lugares donde se puede colocar CSS (inline, internal, external)
-- ✅ **DIRECTRIZ**: Usar **siempre CSS externo** para proyectos profesionales
-- ✅ Selectores CSS: etiqueta, ID, clase, múltiples, anidados y pseudo-clases
+- ✅ **PARA NO SUSPENDER**: Usar **siempre CSS externo** para proyectos profesionales
+- ✅ Selectores CSS: etiqueta, ID, clase, múltiples, anidados...
 - ✅ Propiedades CSS fundamentales de tipografía y color
 - ✅ Cómo usar Google Fonts en nuestros proyectos
 - ✅ Unidades CSS: px, rem y em, y cuándo usar cada una
