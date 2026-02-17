@@ -779,6 +779,12 @@ textarea {
 
 Una de las preguntas más comunes en desarrollo web es "¿cómo centro un div?" o cualquier elemento en la página.
 
+|![1](./assets/1.png) |![2](./assets/2.webp) |![3](./assets/3.jpg) |
+|-|-|-|
+|![4](./assets/4.jpg) |![5](./assets/5.jpg) |![6](./assets/6.jpg) |
+|![7](./assets/7.jpg) |![5](./assets/8.jpg) | |
+
+
 ### Método 1: `margin: 0 auto;` (Centrado Horizontal)
 
 El método más sencillo para centrar un elemento **horizontalmente** es usar `margin: 0 auto;`.
