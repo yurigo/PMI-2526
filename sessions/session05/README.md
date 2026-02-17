@@ -960,7 +960,7 @@ select {
 
 1. **Abre tu proyecto CV** (de sesiones anteriores)
 
-2. **Crea una nueva sección** en tu CV para el formulario de contacto:
+2. **Crea una nueva sección o article** en tu CV para el formulario de contacto:
 
 ```html
 <section id="contacto">
@@ -982,193 +982,7 @@ select {
 - Empresa (input text)
 - Motivo del contacto (radio buttons: Trabajo, Colaboración, Consulta)
 
-4. **Estructura sugerida del formulario:**
-
-```html
-<section id="contacto">
-  <h2>Contacto</h2>
-  <p>¿Quieres ponerte en contacto conmigo? Rellena el formulario:</p>
-
-  <form action="/procesar-contacto" method="POST">
-    <!-- Nombre -->
-    <div>
-      <label for="nombre">Nombre completo:</label>
-      <input 
-        type="text" 
-        id="nombre" 
-        name="nombre" 
-        placeholder="Tu nombre"
-        required 
-      />
-    </div>
-
-    <!-- Email -->
-    <div>
-      <label for="email">Email:</label>
-      <input 
-        type="email" 
-        id="email" 
-        name="email" 
-        placeholder="tu@email.com"
-        required 
-      />
-    </div>
-
-    <!-- Teléfono (opcional) -->
-    <div>
-      <label for="telefono">Teléfono:</label>
-      <input 
-        type="text" 
-        id="telefono" 
-        name="telefono" 
-        placeholder="+34 600 000 000"
-      />
-    </div>
-
-    <!-- Empresa (opcional) -->
-    <div>
-      <label for="empresa">Empresa:</label>
-      <input 
-        type="text" 
-        id="empresa" 
-        name="empresa" 
-        placeholder="Nombre de tu empresa"
-      />
-    </div>
-
-    <!-- Asunto -->
-    <div>
-      <label for="asunto">Asunto:</label>
-      <input 
-        type="text" 
-        id="asunto" 
-        name="asunto" 
-        placeholder="Asunto del mensaje"
-        required 
-      />
-    </div>
-
-    <!-- Motivo del contacto (radio buttons) -->
-    <fieldset>
-      <legend>Motivo del contacto:</legend>
-      
-      <input type="radio" id="trabajo" name="motivo" value="trabajo" checked />
-      <label for="trabajo">Oferta de trabajo</label>
-      
-      <input type="radio" id="colaboracion" name="motivo" value="colaboracion" />
-      <label for="colaboracion">Colaboración</label>
-      
-      <input type="radio" id="consulta" name="motivo" value="consulta" />
-      <label for="consulta">Consulta</label>
-    </fieldset>
-
-    <!-- Mensaje -->
-    <div>
-      <label for="mensaje">Mensaje:</label>
-      <textarea 
-        id="mensaje" 
-        name="mensaje" 
-        rows="6"
-        placeholder="Escribe tu mensaje aquí..."
-        required
-        maxlength="1000"
-      ></textarea>
-    </div>
-
-    <!-- Aceptar términos (checkbox) -->
-    <div>
-      <input type="checkbox" id="privacidad" name="privacidad" required />
-      <label for="privacidad">
-        Acepto la política de privacidad
-      </label>
-    </div>
-
-    <!-- Botones -->
-    <button type="submit">Enviar Mensaje</button>
-    <button type="reset">Limpiar</button>
-  </form>
-</section>
-```
-
-5. **Añade estilos CSS** para hacer el formulario más atractivo:
-
-```css
-/* Estilos para el formulario */
-#contacto {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-}
-
-#contacto h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-form div {
-  margin-bottom: 1rem;
-}
-
-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-family: inherit;
-}
-
-textarea {
-  resize: vertical;
-}
-
-fieldset {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-
-legend {
-  font-weight: 600;
-  padding: 0 0.5rem;
-}
-
-button {
-  padding: 0.75rem 1.5rem;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 1rem;
-  margin-right: 0.5rem;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-button[type="reset"] {
-  background-color: #6c757d;
-}
-
-button[type="reset"]:hover {
-  background-color: #545b62;
-}
-```
-
-6. **No olvides el reset de font-family:**
+4. **No olvides el reset de font-family:**
 
 ```css
 body,
@@ -1179,7 +993,7 @@ button {
 }
 ```
 
-7. **Añade navegación** desde tu menú principal al formulario de contacto:
+5. **Añade navegación** desde tu menú principal al formulario de contacto:
 
 ```html
 <nav>
