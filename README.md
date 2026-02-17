@@ -12,7 +12,7 @@ Programación de Medios Interactivos (PMI) es una asignatura fundamental que int
 | 2   | [Sesión 02 - HTML Avanzado](./sessions/session02/) | <ul><li>Imágenes</li><li>Listas (ordenadas y desordenadas)</li><li>Tablas</li><li>Contenedores (div y span)</li><li>Enlaces externos</li><li>Elementos multimedia (audio y video)</li></ul> | [helloworld-2](./sessions/session02/examples/helloworld-2/) |
 | 3   | [Sesión 03 - HTML5 Semántico](./sessions/session03/) | <ul><li>Elementos block vs inline</li><li>Atributos generales (id, class, title)</li><li>Etiquetas semánticas HTML5 (header, main, footer, nav, aside, section, article)</li></ul> | [html5](./sessions/session03/examples/html5/) |
 | 4   | [Sesión 04 - Introducción a CSS](./sessions/session04/) | <ul><li>CSS Places (Inline, Internal, External)</li><li>Selectores CSS (Tag, Id, Class, Multiple, Nested, Pseudo-Classes)</li><li>Propiedades CSS (font-family, font-size, line-height, font-weight, font-style, background-color, color)</li><li>Google Fonts</li><li>Unidades CSS (px, rem, em)</li></ul> | [harry](./sessions/session04/examples/harry/) |
-| 6   | [Sesión 06 - Formularios HTML](./sessions/session06/) | <ul><li>Formularios (form, action, method)</li><li>Input (text, password, email, date, color, radio, checkbox)</li><li>Atributo name (importancia en submit y agrupación de radio)</li><li>Label (atributo for)</li><li>Button (type submit)</li><li>Textarea</li><li>Centrado con margin: 0 auto</li><li>Reset de font-family</li></ul> | Formulario de contacto en CV |
+| 6   | [Sesión 05 - Formularios HTML](./sessions/session05/) | <ul><li>Formularios (form, action, method)</li><li>Input (text, password, email, date, color, radio, checkbox)</li><li>Atributo name (importancia en submit y agrupación de radio)</li><li>Label (atributo for)</li><li>Button (type submit)</li><li>Textarea</li><li>Centrado con margin: 0 auto</li><li>Reset de font-family</li></ul> | Formulario de contacto en CV |
 
 ## Estructura del Repositorio
 
@@ -34,7 +34,7 @@ PMI-2526/
     │       └── html5/          # CV con etiquetas semánticas HTML5
     ├── session04/              # Introducción a CSS
     │   └── README.md
-    └── session06/              # Formularios HTML
+    └── session05/              # Formularios HTML
         └── README.md
 ```
 
@@ -191,42 +191,42 @@ PMI-2526/
 
 ### CSS places
 
-- [ ] Inline
-- [ ] Internal
-- [ ] External
+- [x] Inline
+- [x] Internal
+- [x] External
 
 ### CSS Selectors:
 
-- [ ] Tag Selector
-- [ ] Id Selector
-- [ ] Class Selector
-- [ ] Multiple Selectors
-- [ ] Nested Selectors
+- [x] Tag Selector
+- [x] Id Selector
+- [x] Class Selector
+- [x] Multiple Selectors
+- [x] Nested Selectors
 - [ ] Pseudo-Classes
 
-- [ ] [CSS Diner](https://flukeout.github.io/)
+- [x] [CSS Diner](https://flukeout.github.io/)
 
 ### CSS Properties:
 
 > [!NOTE]
 > [CSS properties popularity](https://chromestatus.com/metrics/css/popularity)
 
-- [ ] font-family
-- [ ] font-size
-- [ ] line-height
-- [ ] font-weight
-- [ ] font-style
-- [ ] background-color
-- [ ] color
+- [x] font-family
+- [x] font-size
+- [x] line-height
+- [x] font-weight
+- [x] font-style
+- [x] background-color
+- [x] color
 
 ### Google Fonts
 
 ### CSS Units:
 
-- [ ] px
-- [ ] rem
-- [ ] em
-- [ ] %
+- [x] px
+- [x] rem
+- [x] em
+- [x] %
 - [ ] vw
 - [ ] vh
 
