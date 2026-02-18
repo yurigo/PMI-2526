@@ -1,4 +1,4 @@
-# Sesión 06 - Formularios HTML
+# Sesión 05 - Formularios HTML
 
 **Fecha:** 17 de Febrero de 2026
 
