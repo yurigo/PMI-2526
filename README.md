@@ -13,6 +13,7 @@ Programación de Medios Interactivos (PMI) es una asignatura fundamental que int
 | 3   | [Sesión 03 - HTML5 Semántico](./sessions/session03/) | <ul><li>Elementos block vs inline</li><li>Atributos generales (id, class, title)</li><li>Etiquetas semánticas HTML5 (header, main, footer, nav, aside, section, article)</li></ul> | [html5](./sessions/session03/examples/html5/) |
 | 4   | [Sesión 04 - Introducción a CSS](./sessions/session04/) | <ul><li>CSS Places (Inline, Internal, External)</li><li>Selectores CSS (Tag, Id, Class, Multiple, Nested, Pseudo-Classes)</li><li>Propiedades CSS (font-family, font-size, line-height, font-weight, font-style, background-color, color)</li><li>Google Fonts</li><li>Unidades CSS (px, rem, em)</li></ul> | [harry](./sessions/session04/examples/harry/) |
 | 5   | [Sesión 05 - Formularios HTML](./sessions/session05/) | <ul><li>Formularios (form, action, method)</li><li>Input (text, password, email, date, color, radio, checkbox)</li><li>Atributo name (importancia en submit y agrupación de radio)</li><li>Label (atributo for)</li><li>Button (type submit)</li><li>Textarea</li><li>Centrado con margin: 0 auto</li><li>Reset de font-family</li></ul> | [Session05](./sessions/session05/examples/session05/) |
+| 6   | [Sesión 06 - CSS Box Model y Reset](./sessions/session06/) | <ul><li>CSS Reset (Meyer's Reset vs Josh Comeau's Modern Reset)</li><li>Box Model (content, padding, border, margin)</li><li>box-sizing: border-box</li><li>Propiedades shorthand de margin, padding y border</li><li>Propiedades lógicas (margin-inline, padding-block)</li><li>Display (block, inline, inline-block)</li><li>Width y Height</li></ul> | [reset](./sessions/session06/examples/reset/), [box-model](./sessions/session06/examples/box-model/) |
 
 ## Estructura del Repositorio
 
@@ -34,8 +35,13 @@ PMI-2526/
     │       └── html5/          # CV con etiquetas semánticas HTML5
     ├── session04/              # Introducción a CSS
     │   └── README.md
-    └── session05/              # Formularios HTML
-        └── README.md
+    ├── session05/              # Formularios HTML
+    │   └── README.md
+    └── session06/              # CSS Box Model y Reset
+        ├── README.md
+        └── examples/
+            ├── reset/          # Ejemplo de CSS Reset
+            └── box-model/      # Ejemplo de Box Model
 ```
 
 ## Herramientas
