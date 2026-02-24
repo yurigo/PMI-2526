@@ -174,15 +174,15 @@ PMI-2526/
   - [x] type: text
   - [x] type: email
   - [x] type: password
-  - [ ] type: number
+  - [x] type: number
   - [x] type: date
   - [ ] type: datetime
   - [x] type: checkbox
   - [x] type: radio
   - [x] type: color
 - [x] textarea
-- [ ] select
-- [ ] option
+- [x] select
+- [x] option
 - [x] button
   - [x] type: submit
   - [ ] type: reset
@@ -233,17 +233,17 @@ PMI-2526/
 - [x] rem
 - [x] em
 - [x] %
-- [ ] vw
-- [ ] vh
+- [x] vw
+- [x] vh
 
 ### Reset & Normalize
 
-- [ ] https://meyerweb.com/eric/tools/css/reset/
+- [x] https://meyerweb.com/eric/tools/css/reset/
 - [ ] https://necolas.github.io/normalize.css/
   - [ ] https://github.com/sindresorhus/modern-normalize
     - [ ] https://tailwindcss.com/docs/preflight
 - [ ] https://piccalil.li/blog/a-more-modern-css-reset/
-- [ ] https://www.joshwcomeau.com/css/custom-css-reset/
+- [x] https://www.joshwcomeau.com/css/custom-css-reset/
 - [ ] https://x.com/souporserious/status/1746311121949356469
 
 #### Discussion
@@ -252,46 +252,46 @@ PMI-2526/
 
 ### CSS Properties:
 
-- [ ] border
-  - [ ] border-width
-  - [ ] border-style
-  - [ ] border-color
-- [ ] border-radius
-  - [ ] border-top-left-radius
-  - [ ] border-top-right-radius
-  - [ ] border-bottom-left-radius
-  - [ ] border-bottom-right-radius
-- [ ] box-shadow
-- [ ] width
-- [ ] height
-- [ ] background
-- [ ] background-image
-- [ ] background-repeat
-- [ ] background-size
+- [x] border
+  - [x] border-width
+  - [x] border-style
+  - [x] border-color
+- [x] border-radius
+  - [x] border-top-left-radius
+  - [x] border-top-right-radius
+  - [x] border-bottom-left-radius
+  - [x] border-bottom-right-radius
+- [x] box-shadow
+- [x] width
+- [x] height
+- [x] background
+- [x] background-image
+- [x] background-repeat
+- [x] background-size
 - [ ] background-attachment
-- [ ] margin
-  - [ ] margin-top
-  - [ ] margin-right
-  - [ ] margin-bottom
-  - [ ] margin-left
-  - [ ] margin-inline
-    - [ ] margin-inline-start
-    - [ ] margin-inline-end
-  - [ ] margin-block
-    - [ ] margin-block-start
-    - [ ] margin-block-end
-- [ ] padding
-  - [ ] padding-top
-  - [ ] padding-right
-  - [ ] padding-bottom
-  - [ ] padding-left
-  - [ ] padding-inline
-    - [ ] padding-inline-start
-    - [ ] padding-inline-end
-  - [ ] padding-block
-    - [ ] padding-block-start
-    - [ ] padding-block-end
-- [ ] cursor
+- [x] margin
+  - [x] margin-top
+  - [x] margin-right
+  - [x] margin-bottom
+  - [x] margin-left
+  - [x] margin-inline
+    - [x] margin-inline-start
+    - [x] margin-inline-end
+  - [x] margin-block
+    - [x] margin-block-start
+    - [x] margin-block-end
+- [x] padding
+  - [x] padding-top
+  - [x] padding-right
+  - [x] padding-bottom
+  - [x] padding-left
+  - [x] padding-inline
+    - [x] padding-inline-start
+    - [x] padding-inline-end
+  - [x] padding-block
+    - [x] padding-block-start
+    - [x] padding-block-end
+- [x] cursor
 - [ ] outline
 - [ ] display: block
 
