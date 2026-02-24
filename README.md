@@ -14,6 +14,7 @@ Programación de Medios Interactivos (PMI) es una asignatura fundamental que int
 | 4   | [Sesión 04 - Introducción a CSS](./sessions/session04/) | <ul><li>CSS Places (Inline, Internal, External)</li><li>Selectores CSS (Tag, Id, Class, Multiple, Nested, Pseudo-Classes)</li><li>Propiedades CSS (font-family, font-size, line-height, font-weight, font-style, background-color, color)</li><li>Google Fonts</li><li>Unidades CSS (px, rem, em)</li></ul> | [harry](./sessions/session04/examples/harry/) |
 | 5   | [Sesión 05 - Formularios HTML](./sessions/session05/) | <ul><li>Formularios (form, action, method)</li><li>Input (text, password, email, date, color, radio, checkbox)</li><li>Atributo name (importancia en submit y agrupación de radio)</li><li>Label (atributo for)</li><li>Button (type submit)</li><li>Textarea</li><li>Centrado con margin: 0 auto</li><li>Reset de font-family</li></ul> | [Session05](./sessions/session05/examples/session05/) |
 | 6   | [Sesión 06 - CSS Box Model y Reset](./sessions/session06/) | <ul><li>CSS Reset (Meyer's Reset vs Josh Comeau's Modern Reset)</li><li>Box Model (content, padding, border, margin)</li><li>box-sizing: border-box</li><li>Propiedades shorthand de margin, padding y border</li><li>Propiedades lógicas (margin-inline, padding-block)</li><li>Display (block, inline, inline-block)</li><li>Width y Height</li></ul> | [reset](./sessions/session06/examples/reset/), [box-model](./sessions/session06/examples/box-model/) |
+| 7   | [Sesión 07 - CSS: border-radius, box-shadow y height](./sessions/session07/) | <ul><li>Repaso de margin y border</li><li>border-radius (círculos, píldoras, formas orgánicas)</li><li>box-shadow (sombras múltiples, inset)</li><li>height: 100vh vs height: 100% vs height: 100dvh</li><li>cursor: pointer y cursores personalizados</li></ul> | [session07](./sessions/session07/examples/session07/) |
 
 ## Estructura del Repositorio
 
@@ -37,11 +38,15 @@ PMI-2526/
     │   └── README.md
     ├── session05/              # Formularios HTML
     │   └── README.md
-    └── session06/              # CSS Box Model y Reset
+    ├── session06/              # CSS Box Model y Reset
+    │   ├── README.md
+    │   └── examples/
+    │       ├── reset/          # Ejemplo de CSS Reset
+    │       └── box-model/      # Ejemplo de Box Model
+    └── session07/              # CSS: border-radius, box-shadow y height
         ├── README.md
         └── examples/
-            ├── reset/          # Ejemplo de CSS Reset
-            └── box-model/      # Ejemplo de Box Model
+            └── session07/      # Ejemplos de border-radius, box-shadow, height y cursor
 ```
 
 ## Herramientas
