@@ -53,16 +53,16 @@ PMI-2526/
 
 - [x] Chrome (firefox, edge, opera, safari)
 - [x] VSCode
-- [x] Git
-- [x] Github
-- [x] Netlify
-- [x] [Sqwoss](https://squoosh.app/)
+- [ ] Git
+- [ ] Github
+- [ ] Netlify
+- [ ] [Sqwoss](https://squoosh.app/)
 
 ## Extensiones
 
 - [ ] HTMLHint
 - [ ] <strike>Auto Close Tag</strike>
-- [x] Auto Rename Tag
+- [ ] Auto Rename Tag
 - [x] Live Server
 - [ ] Live Share
 
