@@ -15,6 +15,7 @@ Programación de Medios Interactivos (PMI) es una asignatura fundamental que int
 | 5   | [Sesión 05 - Formularios HTML](./sessions/session05/) | <ul><li>Formularios (form, action, method)</li><li>Input (text, password, email, date, color, radio, checkbox)</li><li>Atributo name (importancia en submit y agrupación de radio)</li><li>Label (atributo for)</li><li>Button (type submit)</li><li>Textarea</li><li>Centrado con margin: 0 auto</li><li>Reset de font-family</li></ul> | [Session05](./sessions/session05/examples/session05/) |
 | 6   | [Sesión 06 - CSS Box Model y Reset](./sessions/session06/) | <ul><li>CSS Reset (Meyer's Reset vs Josh Comeau's Modern Reset)</li><li>Box Model (content, padding, border, margin)</li><li>box-sizing: border-box</li><li>Propiedades shorthand de margin, padding y border</li><li>Propiedades lógicas (margin-inline, padding-block)</li><li>Display (block, inline, inline-block)</li><li>Width y Height</li></ul> | [reset](./sessions/session06/examples/reset/), [box-model](./sessions/session06/examples/box-model/) |
 | 7   | [Sesión 07 - CSS: border-radius, box-shadow y height](./sessions/session07/) | <ul><li>Repaso de margin y border</li><li>border-radius (círculos, píldoras, formas orgánicas)</li><li>box-shadow (sombras múltiples, inset)</li><li>height: 100vh vs height: 100% vs height: 100dvh</li><li>cursor: pointer y cursores personalizados</li></ul> | [session07](./sessions/session07/examples/session07/) |
+| 8   | [Sesión 08 - CSS Flexbox](./sessions/session08/) | <ul><li>display: flex</li><li>flex-direction (row, column)</li><li>flex-wrap (wrap)</li><li>justify-content (flex-start, space-between)</li><li>align-items (center, flex-end)</li><li>align-content</li><li>gap (row-gap, column-gap)</li><li>order</li><li>align-self</li></ul> | [session08](./sessions/session08/examples/session08/) |
 
 ## Estructura del Repositorio
 
@@ -43,10 +44,14 @@ PMI-2526/
     │   └── examples/
     │       ├── reset/          # Ejemplo de CSS Reset
     │       └── box-model/      # Ejemplo de Box Model
-    └── session07/              # CSS: border-radius, box-shadow y height
+    ├── session07/              # CSS: border-radius, box-shadow y height
+    │   ├── README.md
+    │   └── examples/
+    │       └── session07/      # Ejemplos de border-radius, box-shadow, height y cursor
+    └── session08/              # CSS Flexbox
         ├── README.md
         └── examples/
-            └── session07/      # Ejemplos de border-radius, box-shadow, height y cursor
+            └── session08/      # Ejemplo de Pokédex con Flexbox
 ```
 
 ## Herramientas
@@ -309,7 +314,7 @@ PMI-2526/
 - [ ] display: inline-block
 - [ ] calc()
 - [ ] margin: 0 auto
-- [ ] display: flex
+- [x] display: flex
 
 ### Flexbox
 
@@ -318,48 +323,48 @@ PMI-2526/
 > - [CSS Tricks - CSS Flexbox Layout Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 > - [Josh Comeau - An Interactive Guide to Flexbox](https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/)
 
-- [ ] display: flex
-  - [ ] flex-direction
-    - [ ] _row_
+- [x] display: flex
+  - [x] flex-direction
+    - [x] _row_
     - [ ] row-reverse
-    - [ ] column
+    - [x] column
     - [ ] column-reverse
-  - [ ] flex-wrap
-    - [ ] wrap
+  - [x] flex-wrap
+    - [x] wrap
     - [ ] wrap-reverse
     - [ ] _nowrap_
   - [ ] flex-flow
-  - [ ] justify-content
-    - [ ] _flex-start_
+  - [x] justify-content
+    - [x] _flex-start_
     - [ ] flex-end
     - [ ] center
-    - [ ] space-between
+    - [x] space-between
     - [ ] space-around
     - [ ] space-evenly
-  - [ ] align-items
+  - [x] align-items
     - [ ] flex-start
-    - [ ] flex-end
-    - [ ] center
+    - [x] flex-end
+    - [x] center
     - [ ] _strech_
     - [ ] baseline
-  - [ ] align-content
+  - [x] align-content
     - [ ] flex-start
     - [ ] flex-end
-    - [ ] center
+    - [x] center
     - [ ] stretch
     - [ ] space-between
     - [ ] space-around
     - [ ] space-evenly
     - [ ] _normal_
-  - [ ] gap
-    - [ ] row-gap
-    - [ ] column-gap
-  - [ ] order
+  - [x] gap
+    - [x] row-gap
+    - [x] column-gap
+  - [x] order
   - [ ] flex-grow
   - [ ] flex-shrink
   - [ ] flex-basis
   - [ ] flex
-  - [ ] align-self
+  - [x] align-self
 
 > [!IMPORTANT]
 > [flexboxfroggy](https://flexboxfroggy.com/#es)
