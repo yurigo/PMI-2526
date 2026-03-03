@@ -16,6 +16,7 @@ Programación de Medios Interactivos (PMI) es una asignatura fundamental que int
 | 6   | [Sesión 06 - CSS Box Model y Reset](./sessions/session06/) | <ul><li>CSS Reset (Meyer's Reset vs Josh Comeau's Modern Reset)</li><li>Box Model (content, padding, border, margin)</li><li>box-sizing: border-box</li><li>Propiedades shorthand de margin, padding y border</li><li>Propiedades lógicas (margin-inline, padding-block)</li><li>Display (block, inline, inline-block)</li><li>Width y Height</li></ul> | [reset](./sessions/session06/examples/reset/), [box-model](./sessions/session06/examples/box-model/) |
 | 7   | [Sesión 07 - CSS: border-radius, box-shadow y height](./sessions/session07/) | <ul><li>Repaso de margin y border</li><li>border-radius (círculos, píldoras, formas orgánicas)</li><li>box-shadow (sombras múltiples, inset)</li><li>height: 100vh vs height: 100% vs height: 100dvh</li><li>cursor: pointer y cursores personalizados</li></ul> | [session07](./sessions/session07/examples/session07/) |
 | 8   | [Sesión 08 - CSS Flexbox](./sessions/session08/) | <ul><li>display: flex</li><li>flex-direction (row, column)</li><li>flex-wrap (wrap)</li><li>justify-content (flex-start, space-between)</li><li>align-items (center, flex-end)</li><li>align-content</li><li>gap (row-gap, column-gap)</li><li>order</li><li>align-self</li></ul> | [session08](./sessions/session08/examples/session08/) |
+| 9   | [Sesión 09 - Actividad de Maquetación con Flexbox](./sessions/session09/) | <ul><li>Actividad práctica de maquetación con Flexbox</li><li>flex-grow</li><li>flex-shrink</li><li>flex-basis</li><li>flex (shorthand)</li><li>Pseudo-clase :hover</li><li>Landing page con HTML5 semántico y Flexbox</li></ul> | [mwc](./sessions/session09/mwc/) |
 
 ## Estructura del Repositorio
 
@@ -48,10 +49,15 @@ PMI-2526/
     │   ├── README.md
     │   └── examples/
     │       └── session07/      # Ejemplos de border-radius, box-shadow, height y cursor
-    └── session08/              # CSS Flexbox
+    ├── session08/              # CSS Flexbox
+    │   ├── README.md
+    │   └── examples/
+    │       └── session08/      # Ejemplo de Pokédex con Flexbox
+    └── session09/              # Actividad de Maquetación con Flexbox
         ├── README.md
-        └── examples/
-            └── session08/      # Ejemplo de Pokédex con Flexbox
+        ├── flex-activity.md
+        ├── flex-activity.png
+        └── mwc/                # Ejemplo desarrollado en clase (MWC)
 ```
 
 ## Herramientas
