@@ -17,6 +17,7 @@ Programación de Medios Interactivos (PMI) es una asignatura fundamental que int
 | 7   | [Sesión 07 - CSS: border-radius, box-shadow y height](./sessions/session07/) | <ul><li>Repaso de margin y border</li><li>border-radius (círculos, píldoras, formas orgánicas)</li><li>box-shadow (sombras múltiples, inset)</li><li>height: 100vh vs height: 100% vs height: 100dvh</li><li>cursor: pointer y cursores personalizados</li></ul> | [session07](./sessions/session07/examples/session07/) |
 | 8   | [Sesión 08 - CSS Flexbox](./sessions/session08/) | <ul><li>display: flex</li><li>flex-direction (row, column)</li><li>flex-wrap (wrap)</li><li>justify-content (flex-start, space-between)</li><li>align-items (center, flex-end)</li><li>align-content</li><li>gap (row-gap, column-gap)</li><li>order</li><li>align-self</li></ul> | [session08](./sessions/session08/examples/session08/) |
 | 9   | [Sesión 09 - Actividad de Maquetación con Flexbox](./sessions/session09/) | <ul><li>Actividad práctica de maquetación con Flexbox</li><li>flex-grow</li><li>flex-shrink</li><li>flex-basis</li><li>flex (shorthand)</li><li>Pseudo-clase :hover</li><li>Landing page con HTML5 semántico y Flexbox</li></ul> | [mwc](./sessions/session09/mwc/) |
+| 10  | [Sesión 10 - Corrección de la Actividad MWC](./sessions/session10/) | <ul><li>Corrección de la actividad MWC en directo</li><li>position: fixed</li><li>Variables CSS (custom properties)</li><li>backdrop-filter: blur()</li><li>Pseudo-clases :nth-child(), :first-child, :last-child</li><li>outline y outline-offset</li><li>object-position</li><li>overflow: hidden</li></ul> | [example-1/to](./sessions/session10/examples/example-1/to/), [example-2/to](./sessions/session10/examples/example-2/to/) |
 
 ## Estructura del Repositorio
 
@@ -53,11 +54,16 @@ PMI-2526/
     │   ├── README.md
     │   └── examples/
     │       └── session08/      # Ejemplo de Pokédex con Flexbox
-    └── session09/              # Actividad de Maquetación con Flexbox
+    ├── session09/              # Actividad de Maquetación con Flexbox
         ├── README.md
         ├── flex-activity.md
         ├── flex-activity.png
         └── mwc/                # Ejemplo desarrollado en clase (MWC)
+    └── session10/              # Corrección de la Actividad MWC
+        ├── README.md
+        └── examples/
+            ├── example-1/      # Ejemplo 1: original (from) y mejorado (to)
+            └── example-2/      # Ejemplo 2: original (from) y mejorado (to)
 ```
 
 ## Herramientas
