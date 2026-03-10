@@ -18,6 +18,7 @@ Programación de Medios Interactivos (PMI) es una asignatura fundamental que int
 | 8   | [Sesión 08 - CSS Flexbox](./sessions/session08/) | <ul><li>display: flex</li><li>flex-direction (row, column)</li><li>flex-wrap (wrap)</li><li>justify-content (flex-start, space-between)</li><li>align-items (center, flex-end)</li><li>align-content</li><li>gap (row-gap, column-gap)</li><li>order</li><li>align-self</li></ul> | [session08](./sessions/session08/examples/session08/) |
 | 9   | [Sesión 09 - Actividad de Maquetación con Flexbox](./sessions/session09/) | <ul><li>Actividad práctica de maquetación con Flexbox</li><li>flex-grow</li><li>flex-shrink</li><li>flex-basis</li><li>flex (shorthand)</li><li>Pseudo-clase :hover</li><li>Landing page con HTML5 semántico y Flexbox</li></ul> | [mwc](./sessions/session09/mwc/) |
 | 10  | [Sesión 10 - Corrección de la Actividad MWC](./sessions/session10/) | <ul><li>Corrección de la actividad MWC en directo</li><li>position: fixed</li><li>Variables CSS (custom properties)</li><li>backdrop-filter: blur()</li><li>Pseudo-clases :nth-child(), :first-child, :last-child</li><li>outline y outline-offset</li><li>object-position</li><li>overflow: hidden</li></ul> | [example-1/to](./sessions/session10/examples/example-1/to/), [example-2/to](./sessions/session10/examples/example-2/to/) |
+| 11  | [Sesión 11 - Introducción a CSS Grid](./sessions/session11/) | <ul><li>display: grid</li><li>grid-template-columns (fr, repeat())</li><li>grid-template-rows</li><li>grid-auto-rows</li><li>gap</li><li>place-items</li><li>grid-column-start / grid-column-end</li><li>grid-row-start / grid-row-end</li><li>Palabra clave span</li><li>Valores negativos de línea (-1)</li><li>Shorthands: grid-column, grid-row, grid-area (4 valores)</li></ul> | [grid-examples](./sessions/session11/grid-examples/) |
 
 ## Estructura del Repositorio
 
@@ -64,6 +65,9 @@ PMI-2526/
         └── examples/
             ├── example-1/      # Ejemplo 1: original (from) y mejorado (to)
             └── example-2/      # Ejemplo 2: original (from) y mejorado (to)
+    └── session11/              # Introducción a CSS Grid
+        ├── README.md
+        └── grid-examples/      # Ejemplos de Grid Layout (imperativo)
 ```
 
 ## Herramientas
@@ -388,20 +392,25 @@ PMI-2526/
 > - [CSS Tricks - CSS Grid Layout Guide](https://css-tricks.com/snippets/css/complete-guide-grid/)
 > - [Josh comeau - An Interactive Guide to CSS Grid](https://www.joshwcomeau.com/css/interactive-guide-to-grid/)
 
-- [ ] display: grid
-- [ ] grid-template-columns
+- [x] display: grid
+- [x] grid-template-columns
+- [x] grid-template-rows
+- [x] grid-auto-rows
 - [ ] grid-gap
-- [ ] grid-column
-  - [ ] grid-column-start
-  - [ ] grid-column-end
-  - [ ] `span`
-- [ ] grid-row
-  - [ ] grid-row-start
-  - [ ] grid-row-end
-  - [ ] `span`
+- [x] gap
+- [x] place-items
+- [x] grid-column
+  - [x] grid-column-start
+  - [x] grid-column-end
+  - [x] `span`
+- [x] grid-row
+  - [x] grid-row-start
+  - [x] grid-row-end
+  - [x] `span`
+- [x] grid-area (4 valores)
 - [ ] repeat(autofit, minmax())
 - [ ] grid-template-areas
-- [ ] grid-area
+- [ ] grid-area (con nombre de área)
 
 > [!NOTE]
 > [layoutit](https://grid.layoutit.com/)
