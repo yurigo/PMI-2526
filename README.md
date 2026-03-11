@@ -19,6 +19,7 @@ Programación de Medios Interactivos (PMI) es una asignatura fundamental que int
 | 9   | [Sesión 09 - Actividad de Maquetación con Flexbox](./sessions/session09/) | <ul><li>Actividad práctica de maquetación con Flexbox</li><li>flex-grow</li><li>flex-shrink</li><li>flex-basis</li><li>flex (shorthand)</li><li>Pseudo-clase :hover</li><li>Landing page con HTML5 semántico y Flexbox</li></ul> | [mwc](./sessions/session09/mwc/) |
 | 10  | [Sesión 10 - Corrección de la Actividad MWC](./sessions/session10/) | <ul><li>Corrección de la actividad MWC en directo</li><li>position: fixed</li><li>Variables CSS (custom properties)</li><li>backdrop-filter: blur()</li><li>Pseudo-clases :nth-child(), :first-child, :last-child</li><li>outline y outline-offset</li><li>object-position</li><li>overflow: hidden</li></ul> | [example-1/to](./sessions/session10/examples/example-1/to/), [example-2/to](./sessions/session10/examples/example-2/to/) |
 | 11  | [Sesión 11 - Introducción a CSS Grid](./sessions/session11/) | <ul><li>display: grid</li><li>grid-template-columns (fr, repeat())</li><li>grid-template-rows</li><li>grid-auto-rows</li><li>gap</li><li>place-items</li><li>grid-column-start / grid-column-end</li><li>grid-row-start / grid-row-end</li><li>Palabra clave span</li><li>Valores negativos de línea (-1)</li><li>Shorthands: grid-column, grid-row, grid-area (4 valores)</li></ul> | [grid-examples](./sessions/session11/grid-examples/) |
+| 12  | [Sesión 12 - CSS Grid Declarativo](./sessions/session12/) | <ul><li>grid-template-areas</li><li>grid-area (con nombre de área)</li><li>Enfoque imperativo vs declarativo</li><li>Layouts responsivos con @media y grid-template-areas</li></ul> | [grid-example-continuacion](./sessions/session12/grid-example-continuacion/) |
 
 ## Estructura del Repositorio
 
@@ -68,6 +69,9 @@ PMI-2526/
     └── session11/              # Introducción a CSS Grid
         ├── README.md
         └── grid-examples/      # Ejemplos de Grid Layout (imperativo)
+    └── session12/              # CSS Grid Declarativo
+        ├── README.md
+        └── grid-example-continuacion/  # Ejemplo de grid-template-areas
 ```
 
 ## Herramientas
@@ -409,8 +413,8 @@ PMI-2526/
   - [x] `span`
 - [x] grid-area (4 valores)
 - [ ] repeat(autofit, minmax())
-- [ ] grid-template-areas
-- [ ] grid-area (con nombre de área)
+- [x] grid-template-areas
+- [x] grid-area (con nombre de área)
 
 > [!NOTE]
 > [layoutit](https://grid.layoutit.com/)
