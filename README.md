@@ -20,6 +20,7 @@ Programación de Medios Interactivos (PMI) es una asignatura fundamental que int
 | 10  | [Sesión 10 - Corrección de la Actividad MWC](./sessions/session10/) | <ul><li>Corrección de la actividad MWC en directo</li><li>position: fixed</li><li>Variables CSS (custom properties)</li><li>backdrop-filter: blur()</li><li>Pseudo-clases :nth-child(), :first-child, :last-child</li><li>outline y outline-offset</li><li>object-position</li><li>overflow: hidden</li></ul> | [example-1/to](./sessions/session10/examples/example-1/to/), [example-2/to](./sessions/session10/examples/example-2/to/) |
 | 11  | [Sesión 11 - Introducción a CSS Grid](./sessions/session11/) | <ul><li>display: grid</li><li>grid-template-columns (fr, repeat())</li><li>grid-template-rows</li><li>grid-auto-rows</li><li>gap</li><li>place-items</li><li>grid-column-start / grid-column-end</li><li>grid-row-start / grid-row-end</li><li>Palabra clave span</li><li>Valores negativos de línea (-1)</li><li>Shorthands: grid-column, grid-row, grid-area (4 valores)</li></ul> | [grid-examples](./sessions/session11/grid-examples/) |
 | 12  | [Sesión 12 - CSS Grid Declarativo](./sessions/session12/) | <ul><li>grid-template-areas</li><li>grid-area (con nombre de área)</li><li>Enfoque imperativo vs declarativo</li><li>Layouts responsivos con @media y grid-template-areas</li></ul> | [grid-example-continuacion](./sessions/session12/grid-example-continuacion/) |
+| 13  | [Sesión 13 - CSS Positioning](./sessions/session13/) | <ul><li>position: static, relative, absolute, fixed, sticky</li><li>top, right, bottom, left</li><li>inset (shorthand)</li><li>z-index y contexto de apilamiento</li><li>filter: drop-shadow()</li><li>Pseudo-clases :nth-child(), :first-child, :not()</li></ul> | [example](./sessions/session13/example/) |
 
 ## Estructura del Repositorio
 
@@ -72,6 +73,9 @@ PMI-2526/
     └── session12/              # CSS Grid Declarativo
         ├── README.md
         └── grid-example-continuacion/  # Ejemplo de grid-template-areas
+    └── session13/              # CSS Positioning
+        ├── README.md
+        └── example/            # Ejemplo de position: fixed, absolute, relative, sticky
 ```
 
 ## Herramientas
@@ -424,16 +428,17 @@ PMI-2526/
 
 ### Positioning
 
-- [ ] position:
-  - [ ] relative
-  - [ ] absolute
-  - [ ] sticky
-  - [ ] fixed
-- [ ] top
-- [ ] left
-- [ ] right
-- [ ] bottom
-- [ ] z-index
+- [x] position:
+  - [x] relative
+  - [x] absolute
+  - [x] sticky
+  - [x] fixed
+- [x] top
+- [x] left
+- [x] right
+- [x] bottom
+- [x] z-index
+- [x] inset
 
 ### Transform
 
