@@ -21,6 +21,7 @@ Programación de Medios Interactivos (PMI) es una asignatura fundamental que int
 | 11  | [Sesión 11 - Introducción a CSS Grid](./sessions/session11/) | <ul><li>display: grid</li><li>grid-template-columns (fr, repeat())</li><li>grid-template-rows</li><li>grid-auto-rows</li><li>gap</li><li>place-items</li><li>grid-column-start / grid-column-end</li><li>grid-row-start / grid-row-end</li><li>Palabra clave span</li><li>Valores negativos de línea (-1)</li><li>Shorthands: grid-column, grid-row, grid-area (4 valores)</li></ul> | [grid-examples](./sessions/session11/grid-examples/) |
 | 12  | [Sesión 12 - CSS Grid Declarativo](./sessions/session12/) | <ul><li>grid-template-areas</li><li>grid-area (con nombre de área)</li><li>Enfoque imperativo vs declarativo</li><li>Layouts responsivos con @media y grid-template-areas</li></ul> | [grid-example-continuacion](./sessions/session12/grid-example-continuacion/) |
 | 13  | [Sesión 13 - CSS Positioning](./sessions/session13/) | <ul><li>position: static, relative, absolute, fixed, sticky</li><li>top, right, bottom, left</li><li>inset (shorthand)</li><li>z-index y contexto de apilamiento</li><li>filter: drop-shadow()</li><li>Pseudo-clases :nth-child(), :first-child, :not()</li></ul> | [example](./sessions/session13/example/) |
+| 14  | [Sesión 14 - CSS Transitions, Transforms y Animations](./sessions/session14/) | <ul><li>transition (duration, timing-function, delay)</li><li>transform: rotate(), translate(), translateX(), translateY(), scale()</li><li>Propiedades individuales: rotate, scale, translate</li><li>animation y @keyframes</li><li>animation-play-state</li><li>Pseudo-elemento ::after para efectos de hover</li></ul> | [animations](./sessions/session14/animations/) |
 
 ## Estructura del Repositorio
 
@@ -76,6 +77,9 @@ PMI-2526/
     └── session13/              # CSS Positioning
         ├── README.md
         └── example/            # Ejemplo de position: fixed, absolute, relative, sticky
+    └── session14/              # CSS Transitions, Transforms y Animations
+        ├── README.md
+        └── animations/         # Ejemplo de transition, transform, animation y @keyframes
 ```
 
 ## Herramientas
@@ -442,30 +446,30 @@ PMI-2526/
 
 ### Transform
 
-- [ ] transform:
-  - [ ] rotate()
-  - [ ] translate()
-  - [ ] translateY()
-  - [ ] translateX()
-  - [ ] scale()
+- [x] transform:
+  - [x] rotate()
+  - [x] translate()
+  - [x] translateY()
+  - [x] translateX()
+  - [x] scale()
 
 ### Transitions
 
-- [ ] transition:
-  - [ ] transition-duration
-  - [ ] transition-timing-function
-  - [ ] transition-delay
+- [x] transition:
+  - [x] transition-duration
+  - [x] transition-timing-function
+  - [x] transition-delay
 
 ### Animations
 
-- [ ] animation:
-  - [ ] animation-name
-  - [ ] animation-duration
-  - [ ] animation-timing-function
-  - [ ] animation-delay
-  - [ ] animation-iteration-count
-  - [ ] animation-fill-mode
-- [ ] @keyframes
+- [x] animation:
+  - [x] animation-name
+  - [x] animation-duration
+  - [x] animation-timing-function
+  - [x] animation-delay
+  - [x] animation-iteration-count
+  - [x] animation-fill-mode
+- [x] @keyframes
 
 #### Actividad
 
