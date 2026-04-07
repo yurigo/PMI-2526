@@ -22,6 +22,7 @@ Programación de Medios Interactivos (PMI) es una asignatura fundamental que int
 | 12  | [Sesión 12 - CSS Grid Declarativo](./sessions/session12/) | <ul><li>grid-template-areas</li><li>grid-area (con nombre de área)</li><li>Enfoque imperativo vs declarativo</li><li>Layouts responsivos con @media y grid-template-areas</li></ul> | [grid-example-continuacion](./sessions/session12/grid-example-continuacion/) |
 | 13  | [Sesión 13 - CSS Positioning](./sessions/session13/) | <ul><li>position: static, relative, absolute, fixed, sticky</li><li>top, right, bottom, left</li><li>inset (shorthand)</li><li>z-index y contexto de apilamiento</li><li>filter: drop-shadow()</li><li>Pseudo-clases :nth-child(), :first-child, :not()</li></ul> | [example](./sessions/session13/example/) |
 | 14  | [Sesión 14 - CSS Transitions, Transforms y Animations](./sessions/session14/) | <ul><li>transition (duration, timing-function, delay)</li><li>transform: rotate(), translate(), translateX(), translateY(), scale()</li><li>Propiedades individuales: rotate, scale, translate</li><li>animation y @keyframes</li><li>animation-play-state</li><li>Pseudo-elemento ::after para efectos de hover</li></ul> | [animations](./sessions/session14/animations/) |
+| 15  | [Sesión 15 - Responsividad en Diseño Web](./sessions/session15/) | <ul><li>Responsividad (responsive design)</li><li>Media Queries</li><li>Breakpoints (móvil, tablet, laptop, desktop)</li><li>Sintaxis clásica (min-width / max-width)</li><li>Sintaxis moderna (width >= / width <=)</li><li>Mobile First vs Desktop First</li><li>Meta etiqueta viewport</li><li>@media print</li></ul> | [example](./sessions/session15/example/) |
 
 ## Estructura del Repositorio
 
@@ -80,6 +81,9 @@ PMI-2526/
     └── session14/              # CSS Transitions, Transforms y Animations
         ├── README.md
         └── animations/         # Ejemplo de transition, transform, animation y @keyframes
+    └── session15/              # Responsividad en Diseño Web
+        ├── README.md
+        └── example/            # Ejemplo de Mobile First y Desktop First con Media Queries
 ```
 
 ## Herramientas
