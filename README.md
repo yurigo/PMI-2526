@@ -23,6 +23,7 @@ Programación de Medios Interactivos (PMI) es una asignatura fundamental que int
 | 13  | [Sesión 13 - CSS Positioning](./sessions/session13/) | <ul><li>position: static, relative, absolute, fixed, sticky</li><li>top, right, bottom, left</li><li>inset (shorthand)</li><li>z-index y contexto de apilamiento</li><li>filter: drop-shadow()</li><li>Pseudo-clases :nth-child(), :first-child, :not()</li></ul> | [example](./sessions/session13/example/) |
 | 14  | [Sesión 14 - CSS Transitions, Transforms y Animations](./sessions/session14/) | <ul><li>transition (duration, timing-function, delay)</li><li>transform: rotate(), translate(), translateX(), translateY(), scale()</li><li>Propiedades individuales: rotate, scale, translate</li><li>animation y @keyframes</li><li>animation-play-state</li><li>Pseudo-elemento ::after para efectos de hover</li></ul> | [animations](./sessions/session14/animations/) |
 | 15  | [Sesión 15 - Responsividad en Diseño Web](./sessions/session15/) | <ul><li>Responsividad (responsive design)</li><li>Media Queries</li><li>Breakpoints (móvil, tablet, laptop, desktop)</li><li>Sintaxis clásica (min-width / max-width)</li><li>Sintaxis moderna (width >= / width <=)</li><li>Mobile First vs Desktop First</li><li>Meta etiqueta viewport</li><li>@media print</li></ul> | [example](./sessions/session15/example/) |
+| 16  | [Sesión 16 - Git y GitHub](./sessions/session16/) | <ul><li>Árbol local vs árbol remoto en GitHub</li><li>git add .</li><li>git commit -m "mensaje"</li><li>git push</li><li>git pull</li><li>Git desde terminal y desde la UI de VSCode</li><li>Ramas: master y develop</li><li>git merge develop en master</li><li>Pull Request de develop a master</li><li>Despliegue con Vercel (CI/CD en rama master)</li></ul> | [example](./sessions/session16/example/) |
 
 ## Estructura del Repositorio
 
@@ -84,14 +85,17 @@ PMI-2526/
     └── session15/              # Responsividad en Diseño Web
         ├── README.md
         └── example/            # Ejemplo de Mobile First y Desktop First con Media Queries
+    └── session16/              # Git y GitHub
+        ├── README.md
+        └── example/            # Chuleta interactiva de comandos Git
 ```
 
 ## Herramientas
 
 - [x] Chrome (firefox, edge, opera, safari)
 - [x] VSCode
-- [ ] Git
-- [ ] Github
+- [x] Git
+- [x] Github
 - [ ] Netlify
 - [ ] [Sqwoss](https://squoosh.app/)
 
