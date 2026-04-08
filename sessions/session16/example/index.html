@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git & GitHub — Chuleta de comandos</title>
+    <style>
+      /* ── Reset ── */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* ── Variables ── */
+      :root {
+        --color-bg: #0d1117;
+        --color-surface: #161b22;
+        --color-border: #30363d;
+        --color-accent: #238636;
+        --color-accent-hover: #2ea043;
+        --color-text: #c9d1d9;
+        --color-text-muted: #8b949e;
+        --color-heading: #f0f6fc;
+        --color-code-bg: #1f2937;
+        --color-tag: #1f6feb;
+        --font-mono: "Courier New", Courier, monospace;
+        --radius: 8px;
+        --gap: 1.5rem;
+      }
+
+      /* ── Base ── */
+      body {
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, sans-serif;
+        line-height: 1.6;
+        padding: 2rem 1rem;
+      }
+
+      /* ── Layout ── */
+      .container {
+        max-width: 900px;
+        margin-inline: auto;
+      }
+
+      /* ── Header ── */
+      header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        color: var(--color-heading);
+        margin-bottom: 0.5rem;
+      }
+
+      header p {
+        color: var(--color-text-muted);
+        font-size: 1.1rem;
+      }
+
+      /* ── Section ── */
+      section {
+        background-color: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        margin-bottom: var(--gap);
+      }
+
+      section h2 {
+        color: var(--color-heading);
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      /* ── Command table ── */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      thead th {
+        text-align: left;
+        color: var(--color-text-muted);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: 0.4rem 0.75rem;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      tbody tr:hover {
+        background-color: rgba(255, 255, 255, 0.03);
+      }
+
+      tbody td {
+        padding: 0.6rem 0.75rem;
+        vertical-align: top;
+        border-bottom: 1px solid rgba(48, 54, 61, 0.5);
+      }
+
+      tbody tr:last-child td {
+        border-bottom: none;
+      }
+
+      /* ── Code ── */
+      code {
+        background-color: var(--color-code-bg);
+        color: #79c0ff;
+        font-family: var(--font-mono);
+        font-size: 0.88rem;
+        padding: 0.2em 0.45em;
+        border-radius: 4px;
+        white-space: nowrap;
+      }
+
+      .desc {
+        color: var(--color-text-muted);
+        font-size: 0.92rem;
+      }
+
+      /* ── Workflow ── */
+      .workflow {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .step {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .step-number {
+        background-color: var(--color-accent);
+        color: #fff;
+        font-size: 0.78rem;
+        font-weight: 700;
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 0.1rem;
+      }
+
+      .step-body p {
+        font-size: 0.95rem;
+      }
+
+      /* ── Diagram ── */
+      .diagram {
+        background-color: var(--color-code-bg);
+        border-radius: var(--radius);
+        padding: 1rem 1.25rem;
+        font-family: var(--font-mono);
+        font-size: 0.85rem;
+        color: #79c0ff;
+        overflow-x: auto;
+        white-space: pre;
+      }
+
+      /* ── Tag ── */
+      .tag {
+        background-color: var(--color-tag);
+        color: #fff;
+        font-size: 0.72rem;
+        font-weight: 600;
+        padding: 0.15em 0.55em;
+        border-radius: 20px;
+        vertical-align: middle;
+      }
+
+      /* ── Footer ── */
+      footer {
+        text-align: center;
+        color: var(--color-text-muted);
+        font-size: 0.85rem;
+        margin-top: 3rem;
+      }
+
+      /* ── Responsive ── */
+      @media (max-width: 600px) {
+        header h1 {
+          font-size: 1.75rem;
+        }
+
+        code {
+          white-space: normal;
+          word-break: break-all;
+        }
+
+        thead {
+          display: none;
+        }
+
+        tbody td {
+          display: block;
+          padding: 0.3rem 0.5rem;
+        }
+
+        tbody tr {
+          border-bottom: 1px solid var(--color-border);
+          display: block;
+          padding: 0.5rem 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🐙 Git &amp; GitHub</h1>
+        <p>Chuleta de comandos — Sesión 16</p>
+      </header>
+
+      <!-- Comandos básicos -->
+      <section>
+        <h2>⚡ Comandos básicos</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Comando</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>git init</code></td>
+              <td class="desc">Inicializa un repositorio Git en la carpeta actual</td>
+            </tr>
+            <tr>
+              <td><code>git status</code></td>
+              <td class="desc">Muestra el estado del repositorio (archivos modificados, en staging, etc.)</td>
+            </tr>
+            <tr>
+              <td><code>git add .</code></td>
+              <td class="desc">Añade <strong>todos</strong> los cambios al área de preparación (staging)</td>
+            </tr>
+            <tr>
+              <td><code>git commit -m "mensaje"</code></td>
+              <td class="desc">Guarda los cambios del staging con un mensaje descriptivo</td>
+            </tr>
+            <tr>
+              <td><code>git push</code></td>
+              <td class="desc">Sube los commits locales al repositorio remoto (GitHub)</td>
+            </tr>
+            <tr>
+              <td><code>git pull</code></td>
+              <td class="desc">Descarga y fusiona los cambios remotos en la rama local actual</td>
+            </tr>
+            <tr>
+              <td><code>git log --oneline</code></td>
+              <td class="desc">Muestra el historial de commits de forma resumida</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Árbol local vs remoto -->
+      <section>
+        <h2>🌳 Árbol local vs. árbol remoto</h2>
+        <div class="diagram">Local (tu máquina)          Remote (GitHub)
+──────────────────          ───────────────
+commit C  ◄── git pull ──   commit C
+commit B  ──── git push ──► commit B
+commit A                    commit A</div>
+      </section>
+
+      <!-- Ramas -->
+      <section>
+        <h2>🌿 Ramas (branches)</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Comando</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>git branch</code></td>
+              <td class="desc">Lista las ramas locales (la rama activa aparece con <code>*</code>)</td>
+            </tr>
+            <tr>
+              <td><code>git branch develop</code></td>
+              <td class="desc">Crea la rama <code>develop</code></td>
+            </tr>
+            <tr>
+              <td><code>git checkout develop</code></td>
+              <td class="desc">Cambia a la rama <code>develop</code></td>
+            </tr>
+            <tr>
+              <td><code>git checkout -b develop</code></td>
+              <td class="desc">Crea y cambia a <code>develop</code> en un solo paso</td>
+            </tr>
+            <tr>
+              <td><code>git checkout master</code></td>
+              <td class="desc">Vuelve a la rama principal</td>
+            </tr>
+            <tr>
+              <td><code>git merge develop</code></td>
+              <td class="desc">Fusiona <code>develop</code> en la rama activa (<code>master</code>)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="diagram" style="margin-top: 1rem;">
+develop:  A──B──C
+                 \
+master:   A───────M   ← merge commit</div>
+      </section>
+
+      <!-- Flujo de trabajo completo -->
+      <section>
+        <h2>🔄 Flujo de trabajo completo</h2>
+        <div class="workflow">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-body">
+              <p>Cambia a la rama de desarrollo</p>
+              <code>git checkout develop</code>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-body">
+              <p>Edita los archivos en VSCode</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-body">
+              <p>Añade los cambios al staging</p>
+              <code>git add .</code>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-body">
+              <p>Guarda un commit descriptivo</p>
+              <code>git commit -m "feat: nueva sección de contacto"</code>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">5</div>
+            <div class="step-body">
+              <p>Sube a GitHub (rama <code>develop</code>)</p>
+              <code>git push</code>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">6</div>
+            <div class="step-body">
+              <p>Abre un <strong>Pull Request</strong> en GitHub: <code>develop</code> → <code>master</code></p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">7</div>
+            <div class="step-body">
+              <p>Revisa y aprueba el Pull Request</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">8</div>
+            <div class="step-body">
+              <p>Fusiona en <code>master</code> y despliega</p>
+              <code>git checkout master</code> &nbsp;→&nbsp;
+              <code>git merge develop</code> &nbsp;→&nbsp;
+              <code>git push</code>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vercel CI/CD -->
+      <section>
+        <h2>🚀 Vercel — CI/CD con GitHub</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Evento en GitHub</th>
+              <th>Acción de Vercel</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>git push</code> a <code>master</code></td>
+              <td class="desc">
+                <span class="tag">Producción</span>
+                Despliega en la URL pública
+              </td>
+            </tr>
+            <tr>
+              <td><code>git push</code> a <code>develop</code></td>
+              <td class="desc">
+                <span class="tag" style="background-color: #7c3aed;">Preview</span>
+                Genera una URL de previsualización
+              </td>
+            </tr>
+            <tr>
+              <td>Pull Request abierto</td>
+              <td class="desc">
+                <span class="tag" style="background-color: #7c3aed;">Preview</span>
+                Crea automáticamente una URL de preview del PR
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Git en VSCode -->
+      <section>
+        <h2>🖥️ Git desde VSCode (interfaz)</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Acción en terminal</th>
+              <th>Equivalente en VSCode</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>git add .</code></td>
+              <td class="desc">Clic en <strong>+</strong> junto al archivo o en <em>Stage All Changes</em></td>
+            </tr>
+            <tr>
+              <td><code>git commit -m "msg"</code></td>
+              <td class="desc">Escribe el mensaje en el campo de texto y pulsa <strong>✓ Commit</strong></td>
+            </tr>
+            <tr>
+              <td><code>git push</code></td>
+              <td class="desc">Botón <strong>Sync Changes ↑</strong></td>
+            </tr>
+            <tr>
+              <td><code>git pull</code></td>
+              <td class="desc">Botón <strong>Sync Changes ↓</strong></td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="margin-top: 0.75rem; color: var(--color-text-muted); font-size: 0.9rem;">
+          Abre el panel con <code>Ctrl + Shift + G</code> o haciendo clic en el icono de bifurcación de la barra lateral.
+        </p>
+      </section>
+
+      <footer>
+        <p>Sesión 16 · PMI-2526 · Git &amp; GitHub</p>
+      </footer>
+    </div>
+  </body>
+</html>
