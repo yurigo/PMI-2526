@@ -6,25 +6,25 @@ Programación de Medios Interactivos (PMI) es una asignatura fundamental que int
 
 ## Sesiones Completadas
 
-| #   | Sesión                         | Temas                                                                                                                                                                          | Proyectos |
-| --- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- |
-| 1   | [Sesión 01 - Introducción a Web](./sessions/session01/) | <ul><li>Introducción a la asignatura</li><li>Visual Studio Code</li><li>Arquitectura cliente-servidor</li><li>Live Server</li><li>Introducción a HTML</li><li>Estructura básica de documentos HTML</li><li>Etiquetas principales</li></ul> | [helloworld](./sessions/session01/examples/helloworld/) |
-| 2   | [Sesión 02 - HTML Avanzado](./sessions/session02/) | <ul><li>Imágenes</li><li>Listas (ordenadas y desordenadas)</li><li>Tablas</li><li>Contenedores (div y span)</li><li>Enlaces externos</li><li>Elementos multimedia (audio y video)</li></ul> | [helloworld-2](./sessions/session02/examples/helloworld-2/) |
-| 3   | [Sesión 03 - HTML5 Semántico](./sessions/session03/) | <ul><li>Elementos block vs inline</li><li>Atributos generales (id, class, title)</li><li>Etiquetas semánticas HTML5 (header, main, footer, nav, aside, section, article)</li></ul> | [html5](./sessions/session03/examples/html5/) |
-| 4   | [Sesión 04 - Introducción a CSS](./sessions/session04/) | <ul><li>CSS Places (Inline, Internal, External)</li><li>Selectores CSS (Tag, Id, Class, Multiple, Nested, Pseudo-Classes)</li><li>Propiedades CSS (font-family, font-size, line-height, font-weight, font-style, background-color, color)</li><li>Google Fonts</li><li>Unidades CSS (px, rem, em)</li></ul> | [harry](./sessions/session04/examples/harry/) |
-| 5   | [Sesión 05 - Formularios HTML](./sessions/session05/) | <ul><li>Formularios (form, action, method)</li><li>Input (text, password, email, date, color, radio, checkbox)</li><li>Atributo name (importancia en submit y agrupación de radio)</li><li>Label (atributo for)</li><li>Button (type submit)</li><li>Textarea</li><li>Centrado con margin: 0 auto</li><li>Reset de font-family</li></ul> | [Session05](./sessions/session05/examples/session05/) |
-| 6   | [Sesión 06 - CSS Box Model y Reset](./sessions/session06/) | <ul><li>CSS Reset (Meyer's Reset vs Josh Comeau's Modern Reset)</li><li>Box Model (content, padding, border, margin)</li><li>box-sizing: border-box</li><li>Propiedades shorthand de margin, padding y border</li><li>Propiedades lógicas (margin-inline, padding-block)</li><li>Display (block, inline, inline-block)</li><li>Width y Height</li></ul> | [reset](./sessions/session06/examples/reset/), [box-model](./sessions/session06/examples/box-model/) |
-| 7   | [Sesión 07 - CSS: border-radius, box-shadow y height](./sessions/session07/) | <ul><li>Repaso de margin y border</li><li>border-radius (círculos, píldoras, formas orgánicas)</li><li>box-shadow (sombras múltiples, inset)</li><li>height: 100vh vs height: 100% vs height: 100dvh</li><li>cursor: pointer y cursores personalizados</li></ul> | [session07](./sessions/session07/examples/session07/) |
-| 8   | [Sesión 08 - CSS Flexbox](./sessions/session08/) | <ul><li>display: flex</li><li>flex-direction (row, column)</li><li>flex-wrap (wrap)</li><li>justify-content (flex-start, space-between)</li><li>align-items (center, flex-end)</li><li>align-content</li><li>gap (row-gap, column-gap)</li><li>order</li><li>align-self</li></ul> | [session08](./sessions/session08/examples/session08/) |
-| 9   | [Sesión 09 - Actividad de Maquetación con Flexbox](./sessions/session09/) | <ul><li>Actividad práctica de maquetación con Flexbox</li><li>flex-grow</li><li>flex-shrink</li><li>flex-basis</li><li>flex (shorthand)</li><li>Pseudo-clase :hover</li><li>Landing page con HTML5 semántico y Flexbox</li></ul> | [mwc](./sessions/session09/mwc/) |
-| 10  | [Sesión 10 - Corrección de la Actividad MWC](./sessions/session10/) | <ul><li>Corrección de la actividad MWC en directo</li><li>position: fixed</li><li>Variables CSS (custom properties)</li><li>backdrop-filter: blur()</li><li>Pseudo-clases :nth-child(), :first-child, :last-child</li><li>outline y outline-offset</li><li>object-position</li><li>overflow: hidden</li></ul> | [example-1/to](./sessions/session10/examples/example-1/to/), [example-2/to](./sessions/session10/examples/example-2/to/) |
-| 11  | [Sesión 11 - Introducción a CSS Grid](./sessions/session11/) | <ul><li>display: grid</li><li>grid-template-columns (fr, repeat())</li><li>grid-template-rows</li><li>grid-auto-rows</li><li>gap</li><li>place-items</li><li>grid-column-start / grid-column-end</li><li>grid-row-start / grid-row-end</li><li>Palabra clave span</li><li>Valores negativos de línea (-1)</li><li>Shorthands: grid-column, grid-row, grid-area (4 valores)</li></ul> | [grid-examples](./sessions/session11/grid-examples/) |
-| 12  | [Sesión 12 - CSS Grid Declarativo](./sessions/session12/) | <ul><li>grid-template-areas</li><li>grid-area (con nombre de área)</li><li>Enfoque imperativo vs declarativo</li><li>Layouts responsivos con @media y grid-template-areas</li></ul> | [grid-example-continuacion](./sessions/session12/grid-example-continuacion/) |
-| 13  | [Sesión 13 - CSS Positioning](./sessions/session13/) | <ul><li>position: static, relative, absolute, fixed, sticky</li><li>top, right, bottom, left</li><li>inset (shorthand)</li><li>z-index y contexto de apilamiento</li><li>filter: drop-shadow()</li><li>Pseudo-clases :nth-child(), :first-child, :not()</li></ul> | [example](./sessions/session13/example/) |
-| 14  | [Sesión 14 - CSS Transitions, Transforms y Animations](./sessions/session14/) | <ul><li>transition (duration, timing-function, delay)</li><li>transform: rotate(), translate(), translateX(), translateY(), scale()</li><li>Propiedades individuales: rotate, scale, translate</li><li>animation y @keyframes</li><li>animation-play-state</li><li>Pseudo-elemento ::after para efectos de hover</li></ul> | [animations](./sessions/session14/animations/) |
-| 15  | [Sesión 15 - Responsividad en Diseño Web](./sessions/session15/) | <ul><li>Responsividad (responsive design)</li><li>Media Queries</li><li>Breakpoints (móvil, tablet, laptop, desktop)</li><li>Sintaxis clásica (min-width / max-width)</li><li>Sintaxis moderna (width >= / width <=)</li><li>Mobile First vs Desktop First</li><li>Meta etiqueta viewport</li><li>@media print</li></ul> | [example](./sessions/session15/example/) |
-| 16  | [Sesión 16 - Git y GitHub](./sessions/session16/) | <ul><li>Árbol local vs árbol remoto en GitHub</li><li>git add .</li><li>git commit -m "mensaje"</li><li>git push</li><li>git pull</li><li>Git desde terminal y desde la UI de VSCode</li><li>Ramas: master y develop</li><li>git merge develop en master</li><li>Pull Request de develop a master</li><li>Despliegue con Vercel (CI/CD en rama master)</li></ul> | [example](./sessions/session16/example/) |
-| 17  | [Sesión 17 - Introducción a JavaScript](./sessions/session17/) | <ul><li>Historia de JavaScript (Brendan Eich, ECMAScript)</li><li>Consola de Chrome y REPL</li><li>Tipos de datos (undefined, number, string, boolean, null, object) y typeof</li><li>Operadores booleanos (&&, ||, !) y comparadores (===, !==) (prohibido == y !=)</li><li>Operadores aritméticos (+, -, *, /, **, %) y de asignación (+=, -=, ++…)</li><li>Declaración de variables (var, let, const) (prohibido var)</li><li>Estructuras de control: if/else, switch, for, while, do…while</li><li>Declaración e invocación de funciones</li><li>Primera toma de contacto con el DOM (getElementById, addEventListener)</li></ul> | [example](./sessions/session17/example/) |
+| #   | Sesión                                                                        | Temas                                                                                                                                                                                                                                                                                                                                                                                | Proyectos                                                                                                                |
+| --- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| 1   | [Sesión 01 - Introducción a Web](./sessions/session01/)                       | <ul><li>Introducción a la asignatura</li><li>Visual Studio Code</li><li>Arquitectura cliente-servidor</li><li>Live Server</li><li>Introducción a HTML</li><li>Estructura básica de documentos HTML</li><li>Etiquetas principales</li></ul>                                                                                                                                           | [helloworld](./sessions/session01/examples/helloworld/)                                                                  |
+| 2   | [Sesión 02 - HTML Avanzado](./sessions/session02/)                            | <ul><li>Imágenes</li><li>Listas (ordenadas y desordenadas)</li><li>Tablas</li><li>Contenedores (div y span)</li><li>Enlaces externos</li><li>Elementos multimedia (audio y video)</li></ul>                                                                                                                                                                                          | [helloworld-2](./sessions/session02/examples/helloworld-2/)                                                              |
+| 3   | [Sesión 03 - HTML5 Semántico](./sessions/session03/)                          | <ul><li>Elementos block vs inline</li><li>Atributos generales (id, class, title)</li><li>Etiquetas semánticas HTML5 (header, main, footer, nav, aside, section, article)</li></ul>                                                                                                                                                                                                   | [html5](./sessions/session03/examples/html5/)                                                                            |
+| 4   | [Sesión 04 - Introducción a CSS](./sessions/session04/)                       | <ul><li>CSS Places (Inline, Internal, External)</li><li>Selectores CSS (Tag, Id, Class, Multiple, Nested, Pseudo-Classes)</li><li>Propiedades CSS (font-family, font-size, line-height, font-weight, font-style, background-color, color)</li><li>Google Fonts</li><li>Unidades CSS (px, rem, em)</li></ul>                                                                          | [harry](./sessions/session04/examples/harry/)                                                                            |
+| 5   | [Sesión 05 - Formularios HTML](./sessions/session05/)                         | <ul><li>Formularios (form, action, method)</li><li>Input (text, password, email, date, color, radio, checkbox)</li><li>Atributo name (importancia en submit y agrupación de radio)</li><li>Label (atributo for)</li><li>Button (type submit)</li><li>Textarea</li><li>Centrado con margin: 0 auto</li><li>Reset de font-family</li></ul>                                             | [Session05](./sessions/session05/examples/session05/)                                                                    |
+| 6   | [Sesión 06 - CSS Box Model y Reset](./sessions/session06/)                    | <ul><li>CSS Reset (Meyer's Reset vs Josh Comeau's Modern Reset)</li><li>Box Model (content, padding, border, margin)</li><li>box-sizing: border-box</li><li>Propiedades shorthand de margin, padding y border</li><li>Propiedades lógicas (margin-inline, padding-block)</li><li>Display (block, inline, inline-block)</li><li>Width y Height</li></ul>                              | [reset](./sessions/session06/examples/reset/), [box-model](./sessions/session06/examples/box-model/)                     |
+| 7   | [Sesión 07 - CSS: border-radius, box-shadow y height](./sessions/session07/)  | <ul><li>Repaso de margin y border</li><li>border-radius (círculos, píldoras, formas orgánicas)</li><li>box-shadow (sombras múltiples, inset)</li><li>height: 100vh vs height: 100% vs height: 100dvh</li><li>cursor: pointer y cursores personalizados</li></ul>                                                                                                                     | [session07](./sessions/session07/examples/session07/)                                                                    |
+| 8   | [Sesión 08 - CSS Flexbox](./sessions/session08/)                              | <ul><li>display: flex</li><li>flex-direction (row, column)</li><li>flex-wrap (wrap)</li><li>justify-content (flex-start, space-between)</li><li>align-items (center, flex-end)</li><li>align-content</li><li>gap (row-gap, column-gap)</li><li>order</li><li>align-self</li></ul>                                                                                                    | [session08](./sessions/session08/examples/session08/)                                                                    |
+| 9   | [Sesión 09 - Actividad de Maquetación con Flexbox](./sessions/session09/)     | <ul><li>Actividad práctica de maquetación con Flexbox</li><li>flex-grow</li><li>flex-shrink</li><li>flex-basis</li><li>flex (shorthand)</li><li>Pseudo-clase :hover</li><li>Landing page con HTML5 semántico y Flexbox</li></ul>                                                                                                                                                     | [mwc](./sessions/session09/mwc/)                                                                                         |
+| 10  | [Sesión 10 - Corrección de la Actividad MWC](./sessions/session10/)           | <ul><li>Corrección de la actividad MWC en directo</li><li>position: fixed</li><li>Variables CSS (custom properties)</li><li>backdrop-filter: blur()</li><li>Pseudo-clases :nth-child(), :first-child, :last-child</li><li>outline y outline-offset</li><li>object-position</li><li>overflow: hidden</li></ul>                                                                        | [example-1/to](./sessions/session10/examples/example-1/to/), [example-2/to](./sessions/session10/examples/example-2/to/) |
+| 11  | [Sesión 11 - Introducción a CSS Grid](./sessions/session11/)                  | <ul><li>display: grid</li><li>grid-template-columns (fr, repeat())</li><li>grid-template-rows</li><li>grid-auto-rows</li><li>gap</li><li>place-items</li><li>grid-column-start / grid-column-end</li><li>grid-row-start / grid-row-end</li><li>Palabra clave span</li><li>Valores negativos de línea (-1)</li><li>Shorthands: grid-column, grid-row, grid-area (4 valores)</li></ul> | [grid-examples](./sessions/session11/grid-examples/)                                                                     |
+| 12  | [Sesión 12 - CSS Grid Declarativo](./sessions/session12/)                     | <ul><li>grid-template-areas</li><li>grid-area (con nombre de área)</li><li>Enfoque imperativo vs declarativo</li><li>Layouts responsivos con @media y grid-template-areas</li></ul>                                                                                                                                                                                                  | [grid-example-continuacion](./sessions/session12/grid-example-continuacion/)                                             |
+| 13  | [Sesión 13 - CSS Positioning](./sessions/session13/)                          | <ul><li>position: static, relative, absolute, fixed, sticky</li><li>top, right, bottom, left</li><li>inset (shorthand)</li><li>z-index y contexto de apilamiento</li><li>filter: drop-shadow()</li><li>Pseudo-clases :nth-child(), :first-child, :not()</li></ul>                                                                                                                    | [example](./sessions/session13/example/)                                                                                 |
+| 14  | [Sesión 14 - CSS Transitions, Transforms y Animations](./sessions/session14/) | <ul><li>transition (duration, timing-function, delay)</li><li>transform: rotate(), translate(), translateX(), translateY(), scale()</li><li>Propiedades individuales: rotate, scale, translate</li><li>animation y @keyframes</li><li>animation-play-state</li><li>Pseudo-elemento ::after para efectos de hover</li></ul>                                                           | [animations](./sessions/session14/animations/)                                                                           |
+| 15  | [Sesión 15 - Responsividad en Diseño Web](./sessions/session15/)              | <ul><li>Responsividad (responsive design)</li><li>Media Queries</li><li>Breakpoints (móvil, tablet, laptop, desktop)</li><li>Sintaxis clásica (min-width / max-width)</li><li>Sintaxis moderna (width >= / width <=)</li><li>Mobile First vs Desktop First</li><li>Meta etiqueta viewport</li><li>@media print</li></ul>                                                             | [example](./sessions/session15/example/)                                                                                 |
+| 16  | [Sesión 16 - Git y GitHub](./sessions/session16/)                             | <ul><li>Árbol local vs árbol remoto en GitHub</li><li>git add .</li><li>git commit -m "mensaje"</li><li>git push</li><li>git pull</li><li>Git desde terminal y desde la UI de VSCode</li><li>Ramas: master y develop</li><li>git merge develop en master</li><li>Pull Request de develop a master</li><li>Despliegue con Vercel (CI/CD en rama master)</li></ul>                     | [example](./sessions/session16/example/)                                                                                 |
+| 17  | [Sesión 17 - Introducción a JavaScript](./sessions/session17/)                | <ul><li>Historia de JavaScript (Brendan Eich, ECMAScript)</li><li>Consola de Chrome y REPL</li><li>Tipos de datos (undefined, number, string, boolean, null, object) y typeof</li><li>Operadores booleanos (&&,                                                                                                                                                                      |                                                                                                                          | , !) y comparadores (===, !==) (prohibido == y !=)</li><li>Operadores aritméticos (+, -, \*, /, \*\*, %) y de asignación (+=, -=, ++…)</li><li>Declaración de variables (var, let, const) (prohibido var)</li><li>Estructuras de control: if/else, switch, for, while, do…while</li><li>Declaración e invocación de funciones</li><li>Primera toma de contacto con el DOM (getElementById, addEventListener)</li></ul> | [example](./sessions/session17/example/) |
 
 ## Estructura del Repositorio
 
@@ -491,10 +491,10 @@ PMI-2526/
 
 ### Responsive
 
-- [ ] @media
-- [ ] min-width: 500px 👴
-- [ ] width > 500px 👶
-- [ ] HTML <link> tag Attribute: media="screen and (max-width: ...)"
+- [x] @media
+- [x] min-width: 500px 👴
+- [x] width > 500px 👶
+- [x] HTML <link> tag Attribute: media="screen and (max-width: ...)"
 
 #### Actividad
 
@@ -516,14 +516,14 @@ PMI-2526/
 
 ## [Javascript](https://github.com/yurigo/javascript)
 
-- [ ] hello world!
-  - [ ] scripting
-  - [ ] dynamic + weakly typed
-- [ ] link script to the page
+- [x] hello world!
+  - [x] scripting
+  - [x] dynamic + weakly typed
+- [x] link script to the page
   - [ ] `defer`
   - [ ] `async`
   - [ ] `type="module"`
-- [ ] `console.log("hello world")`
+- [x] `console.log("hello world")`
 - [ ] `document`
   - [ ] `.getElementByID("ID")`
 - [ ] 3rd party libraries
@@ -532,24 +532,24 @@ PMI-2526/
 
 #### Primitive types ([📚](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_values))
 
-- [ ] Null
-- [ ] Undefined
-- [ ] Boolean
-- [ ] Number
+- [x] Null
+- [x] Undefined
+- [x] Boolean
+- [x] Number
 - [ ] BigInt
-- [ ] String
+- [x] String
 - [ ] Symbol
 
 #### Objects ([📚](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object))
 
 - [ ] Objetos
-- [ ] Funciones
+- [x] Funciones
 - [ ] [Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 - [ ] [Fechas](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
 ### Functions ([📚](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions))
 
-- [ ] Function declaration
+- [x] Function declaration
 - [ ] Function expression
 - [ ] Arrow Function
 
@@ -624,7 +624,7 @@ TBD
 ## Deploy
 
 - [ ] Netlify!!
-- [ ] Vercel
+- [x] Vercel
 - [ ] Github Pages
 - [ ] Firebase Hosting
 - [ ] Render
