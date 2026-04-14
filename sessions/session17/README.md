@@ -173,6 +173,34 @@ a--;      // a = a - 1 (post-decremento)
 --a;      // pre-decremento
 ```
 
+#### Post-incremento vs pre-incremento
+
+La diferencia es cuándo se aplica el incremento **respecto al valor que se usa en la expresión**:
+
+| Operador | Nombre           | ¿Cuándo incrementa?                       |
+| -------- | ---------------- | ----------------------------------------- |
+| `x++`    | Post-incremento  | **Después** de usar el valor en la expresión |
+| `++x`    | Pre-incremento   | **Antes** de usar el valor en la expresión   |
+
+```js
+let x = 5;
+
+// POST-incremento (x++)
+// Primero se usa el valor actual (5), luego se incrementa
+let post = x++;
+console.log(post); // 5  ← valor ANTES del incremento
+console.log(x);    // 6  ← x ya vale 6 después
+
+// PRE-incremento (++x)
+// Primero se incrementa, luego se usa el nuevo valor
+let pre = ++x;
+console.log(pre);  // 7  ← valor DESPUÉS del incremento
+console.log(x);    // 7  ← x también vale 7
+```
+
+> [!NOTE]
+> En una línea aislada como `a++;` o `++a;` el resultado es idéntico: `a` queda incrementado en 1. La diferencia solo importa cuando el resultado de la expresión se **asigna o usa** al mismo tiempo que se incrementa.
+
 ---
 
 ### 6. Declaración de variables
