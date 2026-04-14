@@ -14,14 +14,29 @@ El ejemplo construido en clase se encuentra en la carpeta [`example/`](./example
 
 **JavaScript** nació en 1995 creado por **Brendan Eich** en Netscape en solo 10 días. A pesar de su nombre, no tiene ninguna relación con Java; el nombre fue una decisión de marketing de la época.
 
-| Año  | Hito                                                                 |
-| ---- | -------------------------------------------------------------------- |
-| 1995 | Brendan Eich crea JavaScript en Netscape (en 10 días)               |
-| 1996 | Microsoft lanza JScript (su versión para Internet Explorer)          |
-| 1997 | Se estandariza como **ECMAScript** (ES1) por ECMA International     |
-| 2009 | **ES5** — Arrays con `forEach`, `map`, `filter`                     |
-| 2015 | **ES6 / ES2015** — `let`, `const`, arrow functions, clases, módulos |
-| Hoy  | Se publica una nueva versión del estándar cada año                   |
+### 1. Historia de JavaScript
+
+**JavaScript** nació en 1995 creado por **Brendan Eich** en Netscape en solo 10 días. A pesar de su nombre, no tiene ninguna relación con Java; el nombre fue una decisión de marketing de la época.
+
+| Año   | Hito                                                                                     |
+| ----- | ---------------------------------------------------------------------------------------- |
+| Año   | Hito                                                                                     |
+| ----- | ---------------------------------------------------------------------------------------- |
+| 1995  | Brendan Eich crea JavaScript en Netscape (en 10 días)                                    |
+| 1996  | Microsoft lanza JScript (su versión para Internet Explorer)                              |
+| 1997  | Se estandariza como **ECMAScript** (ES1) por ECMA International                          |
+| 2009  | **ES5** — `forEach`, `map`, `filter`, `JSON.parse/stringify`, strict mode                |
+| 2015  | **ES6 / ES2015** — `let`, `const`, arrow functions, clases, módulos, promesas            |
+| 2016  | **ES2016** — `**` (exponentiation), `Array.prototype.includes`                           |
+| 2017  | **ES2017** — `async`/`await`, `Object.values`, `Object.entries`                          |
+| 2018  | **ES2018** — rest/spread en objetos, `Promise.finally`, mejoras de regex                 |
+| 2019  | **ES2019** — `Array.prototype.flat`, `Array.prototype.flatMap`                           |
+| 2020  | **ES2020** — `?.` (optional chaining), `??` (nullish coalescing), `BigInt`               |
+| 2021  | **ES2021** — `String.prototype.replaceAll`, `Promise.any`                                |
+| 2022  | **ES2022** — class fields, campos privados, `top-level await`, `Array.prototype.at`      |
+| 2023  | **ES2023** — `toSorted`, `toReversed`, `toSpliced`, `with`, `findLast`, `findLastIndex`  |
+| 2024  | **ES2024** — `Object.groupBy`, `Map.groupBy`, `Promise.withResolvers`                    |
+| 2025+ | Propuestas en curso (no estándar aún): `Temporal`, Pattern Matching, etc.                |
 
 👉 JavaScript es el **único lenguaje de programación nativo del navegador**  
 👉 Hoy también se ejecuta en el servidor gracias a **Node.js**  
@@ -31,9 +46,9 @@ El ejemplo construido en clase se encuentra en la carpeta [`example/`](./example
 
 ### 2. Consola de Chrome y REPL
 
-La **consola de Chrome** (DevTools → pestaña *Console*) es una herramienta de desarrollo integrada en el navegador que permite ejecutar código JavaScript de forma interactiva.
+La **consola de Chrome** (DevTools → pestaña _Console_) es una herramienta de desarrollo integrada en el navegador que permite ejecutar código JavaScript de forma interactiva.
 
-Funciona como un **REPL** (*Read–Eval–Print Loop*):
+Funciona como un **REPL** (_Read–Eval–Print Loop_):
 
 1. **Read** — lees (escribes) una expresión
 2. **Eval** — el motor la evalúa
@@ -42,21 +57,21 @@ Funciona como un **REPL** (*Read–Eval–Print Loop*):
 
 #### Cómo abrirla
 
-| Método               | Atajo                        |
-| -------------------- | ---------------------------- |
-| Menú del navegador   | ⋮ → Más herramientas → DevTools |
-| Teclado (Windows)    | `F12` o `Ctrl + Shift + I`  |
-| Teclado (Mac)        | `Cmd + Option + I`           |
-| Clic derecho         | *Inspeccionar* → pestaña *Console* |
+| Método             | Atajo                              |
+| ------------------ | ---------------------------------- |
+| Menú del navegador | ⋮ → Más herramientas → DevTools    |
+| Teclado (Windows)  | `F12` o `Ctrl + Shift + I`         |
+| Teclado (Mac)      | `Cmd + Option + I`                 |
+| Clic derecho       | _Inspeccionar_ → pestaña _Console_ |
 
 #### `console.log()`
 
 La función más usada para depurar código:
 
 ```js
-console.log("Hola mundo");        // escribe en la consola
-console.log(typeof 42);           // "number"
-console.log("valor:", 42);        // varios valores a la vez
+console.log("Hola mundo"); // escribe en la consola
+console.log(typeof 42); // "number"
+console.log("valor:", 42); // varios valores a la vez
 ```
 
 ---
@@ -65,40 +80,40 @@ console.log("valor:", 42);        // varios valores a la vez
 
 JavaScript tiene **tipado dinámico**: una misma variable puede cambiar de tipo a lo largo de la ejecución. Para conocer el tipo de un valor se usa el operador `typeof`.
 
-| Tipo        | Ejemplo                  | `typeof` devuelve |
-| ----------- | ------------------------ | ----------------- |
-| `undefined` | `let a;`                 | `"undefined"`     |
-| `number`    | `42`, `3.14`             | `"number"`        |
-| `string`    | `"hola"`, `'mundo'`      | `"string"`        |
-| `boolean`   | `true`, `false`          | `"boolean"`       |
-| `null`      | `null`                   | `"object"` ⚠️    |
-| `object`    | `{}`, `[]`               | `"object"`        |
-| `function`  | `function f() {}`        | `"function"`      |
+| Tipo        | Ejemplo             | `typeof` devuelve |
+| ----------- | ------------------- | ----------------- |
+| `undefined` | `let a;`            | `"undefined"`     |
+| `number`    | `42`, `3.14`        | `"number"`        |
+| `string`    | `"hola"`, `'mundo'` | `"string"`        |
+| `boolean`   | `true`, `false`     | `"boolean"`       |
+| `null`      | `null`              | `"object"` ⚠️     |
+| `object`    | `{}`, `[]`          | `"object"`        |
+| `function`  | `function f() {}`   | `"function"`      |
 
 > [!NOTE]
 > `typeof null` devuelve `"object"`. Es un **bug histórico** de JavaScript que no se puede corregir por compatibilidad con webs antiguas.
 
 ```js
 let a;
-console.log(typeof a);   // "undefined"
+console.log(typeof a); // "undefined"
 
 a = 10;
-console.log(typeof a);   // "number"
+console.log(typeof a); // "number"
 
 a = "hola";
-console.log(typeof a);   // "string"
+console.log(typeof a); // "string"
 
 a = true;
-console.log(typeof a);   // "boolean"
+console.log(typeof a); // "boolean"
 
 a = null;
-console.log(typeof a);   // "object"  ← bug histórico de JS
+console.log(typeof a); // "object"  ← bug histórico de JS
 
 a = {};
-console.log(typeof a);   // "object"
+console.log(typeof a); // "object"
 
 a = [];
-console.log(typeof a);   // "object"
+console.log(typeof a); // "object"
 ```
 
 ---
@@ -107,21 +122,21 @@ console.log(typeof a);   // "object"
 
 Los **operadores booleanos** (o lógicos) trabajan con valores `true` / `false`.
 
-| Operador | Nombre | Descripción                                    |
-| -------- | ------ | ---------------------------------------------- |
-| `&&`     | AND    | `true` solo si **ambos** operandos son `true`  |
-| `\|\|`   | OR     | `true` si **al menos uno** es `true`           |
-| `!`      | NOT    | Invierte el valor booleano                     |
+| Operador | Nombre  | Descripción                                   |
+| -------- | ------- | --------------------------------------------- |
+| `&&`     | AND     | `true` solo si **ambos** operandos son `true` |
+| `\|\|`   | OR      | `true` si **al menos uno** es `true`          |
+| `!`      | NOT     | Invierte el valor booleano                    |
 | `!!`     | NOT NOT | Convierte cualquier valor a su booleano       |
 
 ```js
-true && true    // true
-true && false   // false
-true || false   // true
-false || false  // false
-!true           // false
-!!0             // false  (convierte 0 a booleano)
-!!"hola"        // true   (string no vacío es truthy)
+true && true; // true
+true && false; // false
+true || false; // true
+false || false; // false
+!true; // false
+!!0; // false  (convierte 0 a booleano)
+!!"hola"; // true   (string no vacío es truthy)
 ```
 
 #### Comparadores de igualdad
@@ -130,57 +145,57 @@ false || false  // false
 > **Está prohibido usar `==` y `!=`** porque realizan coerción de tipos y producen resultados inesperados. Usa siempre `===` y `!==`.
 
 ```js
-3 == "3"     // true  ← coerción de tipo, ¡peligroso!
-3 === "3"    // false ← compara valor Y tipo → correcto ✅
-3 !== "3"    // true  ← correcto ✅
+3 == "3"; // true  ← coerción de tipo, ¡peligroso!
+3 === "3"; // false ← compara valor Y tipo → correcto ✅
+3 !== "3"; // true  ← correcto ✅
 ```
 
-| Operador | Descripción                              |
-| -------- | ---------------------------------------- |
-| `===`    | Igual en valor y tipo ✅                  |
-| `!==`    | Distinto en valor o tipo ✅               |
-| `>`      | Mayor que                                |
-| `<`      | Menor que                                |
-| `>=`     | Mayor o igual que                        |
-| `<=`     | Menor o igual que                        |
+| Operador | Descripción                 |
+| -------- | --------------------------- |
+| `===`    | Igual en valor y tipo ✅    |
+| `!==`    | Distinto en valor o tipo ✅ |
+| `>`      | Mayor que                   |
+| `<`      | Menor que                   |
+| `>=`     | Mayor o igual que           |
+| `<=`     | Menor o igual que           |
 
 ---
 
 ### 5. Operadores aritméticos
 
-| Operador | Nombre        | Ejemplo        | Resultado |
-| -------- | ------------- | -------------- | --------- |
-| `+`      | Suma          | `3 + 2`        | `5`       |
-| `-`      | Resta         | `10 - 4`       | `6`       |
-| `*`      | Multiplicación | `3 * 4`       | `12`      |
-| `/`      | División      | `10 / 3`       | `3.333…`  |
-| `**`     | Exponente     | `2 ** 8`       | `256`     |
-| `%`      | Módulo        | `10 % 3`       | `1`       |
+| Operador | Nombre         | Ejemplo  | Resultado |
+| -------- | -------------- | -------- | --------- |
+| `+`      | Suma           | `3 + 2`  | `5`       |
+| `-`      | Resta          | `10 - 4` | `6`       |
+| `*`      | Multiplicación | `3 * 4`  | `12`      |
+| `/`      | División       | `10 / 3` | `3.333…`  |
+| `**`     | Exponente      | `2 ** 8` | `256`     |
+| `%`      | Módulo         | `10 % 3` | `1`       |
 
 #### Operadores de asignación abreviada
 
 ```js
 let a = 1000;
 
-a += 1;   // a = a + 1  → 1001
-a -= 2;   // a = a - 2  → 999
-a *= 3;   // a = a * 3  → 2997
-a /= 7;   // a = a / 7  → 428.14…
+a += 1; // a = a + 1  → 1001
+a -= 2; // a = a - 2  → 999
+a *= 3; // a = a * 3  → 2997
+a /= 7; // a = a / 7  → 428.14…
 
-a++;      // a = a + 1 (post-incremento)
-a--;      // a = a - 1 (post-decremento)
-++a;      // pre-incremento
---a;      // pre-decremento
+a++; // a = a + 1 (post-incremento)
+a--; // a = a - 1 (post-decremento)
+++a; // pre-incremento
+--a; // pre-decremento
 ```
 
 #### Post-incremento vs pre-incremento
 
 La diferencia es cuándo se aplica el incremento **respecto al valor que se usa en la expresión**:
 
-| Operador | Nombre           | ¿Cuándo incrementa?                       |
-| -------- | ---------------- | ----------------------------------------- |
-| `x++`    | Post-incremento  | **Después** de usar el valor en la expresión |
-| `++x`    | Pre-incremento   | **Antes** de usar el valor en la expresión   |
+| Operador | Nombre          | ¿Cuándo incrementa?                          |
+| -------- | --------------- | -------------------------------------------- |
+| `x++`    | Post-incremento | **Después** de usar el valor en la expresión |
+| `++x`    | Pre-incremento  | **Antes** de usar el valor en la expresión   |
 
 ```js
 let x = 5;
@@ -189,13 +204,13 @@ let x = 5;
 // Primero se usa el valor actual (5), luego se incrementa
 let post = x++;
 console.log(post); // 5  ← valor ANTES del incremento
-console.log(x);    // 6  ← x ya vale 6 después
+console.log(x); // 6  ← x ya vale 6 después
 
 // PRE-incremento (++x)
 // Primero se incrementa, luego se usa el nuevo valor
 let pre = ++x;
-console.log(pre);  // 7  ← valor DESPUÉS del incremento
-console.log(x);    // 7  ← x también vale 7
+console.log(pre); // 7  ← valor DESPUÉS del incremento
+console.log(x); // 7  ← x también vale 7
 ```
 
 > [!NOTE]
@@ -207,15 +222,15 @@ console.log(x);    // 7  ← x también vale 7
 
 En JavaScript hay tres formas de declarar variables:
 
-| Palabra clave | Reasignable | Ámbito  | ¿Usarla? |
-| ------------- | ----------- | ------- | -------- |
-| `var`         | ✅ Sí       | función | ❌ **Prohibida** (comportamiento confuso) |
-| `let`         | ✅ Sí       | bloque  | ✅ Para valores que cambian |
+| Palabra clave | Reasignable | Ámbito  | ¿Usarla?                                   |
+| ------------- | ----------- | ------- | ------------------------------------------ |
+| `var`         | ✅ Sí       | función | ❌ **Prohibida** (comportamiento confuso)  |
+| `let`         | ✅ Sí       | bloque  | ✅ Para valores que cambian                |
 | `const`       | ❌ No       | bloque  | ✅ Para valores que no cambian (preferida) |
 
 ```js
 let b = 10;
-b = "hola";   // ✅ let permite reasignación
+b = "hola"; // ✅ let permite reasignación
 
 const c = 10;
 // c = 20;    // ❌ TypeError: Assignment to constant variable
@@ -234,9 +249,9 @@ const c = 10;
 let a = 99;
 
 if (a > 100) {
-    console.log("mayor que 100");
+  console.log("mayor que 100");
 } else {
-    console.log("menor o igual que 100");
+  console.log("menor o igual que 100");
 }
 ```
 
@@ -248,26 +263,26 @@ if (a > 100) {
 let a = 2;
 
 switch (a) {
-    case 1:
-        console.log("vale 1");
-        break;
-    case 2:
-        console.log("vale 2");
-        break;
-    default:
-        console.log("vale otro");
-        break;
+  case 1:
+    console.log("vale 1");
+    break;
+  case 2:
+    console.log("vale 2");
+    break;
+  default:
+    console.log("vale otro");
+    break;
 }
 ```
 
 > [!NOTE]
-> No olvides el `break` en cada `case` para evitar que la ejecución "caiga" al siguiente caso (*fall-through*).
+> No olvides el `break` en cada `case` para evitar que la ejecución "caiga" al siguiente caso (_fall-through_).
 
 #### Bucle `for`
 
 ```js
 for (let i = 1; i <= 100; i++) {
-    console.log("f", i);
+  console.log("f", i);
 }
 ```
 
@@ -276,9 +291,9 @@ for (let i = 1; i <= 100; i++) {
 
 ```js
 for (let j = 0; j < 5; j++) {
-    if (j === 1) continue;   // salta j = 1
-    if (j === 3) break;      // sale cuando j = 3
-    console.log(j);          // imprime: 0, 2
+  if (j === 1) continue; // salta j = 1
+  if (j === 3) break; // sale cuando j = 3
+  console.log(j); // imprime: 0, 2
 }
 ```
 
@@ -290,8 +305,8 @@ Ejecuta el bloque **mientras** la condición sea `true`:
 let i = 101;
 
 while (i < 200) {
-    console.log("w", i);
-    i++;
+  console.log("w", i);
+  i++;
 }
 ```
 
@@ -301,16 +316,16 @@ Ejecuta el bloque **al menos una vez** antes de comprobar la condición:
 
 ```js
 do {
-    console.log("d", i);
-    i++;
+  console.log("d", i);
+  i++;
 } while (i < 300);
 ```
 
-| Bucle       | ¿Cuándo usarlo?                                              |
-| ----------- | ------------------------------------------------------------ |
-| `for`       | Cuando sabes cuántas iteraciones necesitas                   |
-| `while`     | Cuando no sabes cuántas iteraciones necesitas                |
-| `do…while`  | Cuando necesitas ejecutar el bloque al menos una vez         |
+| Bucle      | ¿Cuándo usarlo?                                      |
+| ---------- | ---------------------------------------------------- |
+| `for`      | Cuando sabes cuántas iteraciones necesitas           |
+| `while`    | Cuando no sabes cuántas iteraciones necesitas        |
+| `do…while` | Cuando necesitas ejecutar el bloque al menos una vez |
 
 ---
 
@@ -321,36 +336,36 @@ Una **función** es un bloque de código reutilizable que puede recibir **parám
 ```js
 // Declaración
 function suma(a, b) {
-    return a + b;
+  return a + b;
 }
 
 function resta(a, b) {
-    return a - b;
+  return a - b;
 }
 
 function multiplicacion(a, b) {
-    return a * b;
+  return a * b;
 }
 
 function division(a, b) {
-    return a / b;
+  return a / b;
 }
 
 // Invocación (llamada)
-console.log(suma(1, 2));          // 3
-console.log(resta(10, 4));        // 6
+console.log(suma(1, 2)); // 3
+console.log(resta(10, 4)); // 6
 console.log(multiplicacion(3, 4)); // 12
-console.log(division(10, 2));     // 5
+console.log(division(10, 2)); // 5
 
 const resultado = suma(1, 4);
-console.log(resultado);           // 5
+console.log(resultado); // 5
 ```
 
 ---
 
 ### 9. Primera toma de contacto con el DOM
 
-El **DOM** (*Document Object Model*) es la representación del HTML como un árbol de objetos que JavaScript puede leer y modificar.
+El **DOM** (_Document Object Model_) es la representación del HTML como un árbol de objetos que JavaScript puede leer y modificar.
 
 > [!NOTE]
 > Para acceder al DOM desde un script externo, el `<script>` debe colocarse **al final del `<body>`** (o usar `defer`). Si se coloca en el `<head>`, el HTML aún no ha sido cargado y el navegador no encontrará los elementos.
@@ -365,9 +380,9 @@ const x = document.getElementById("titulo");
 
 ```js
 x.addEventListener("click", () => {
-    // código que se ejecuta al hacer clic en el elemento
-    document.getElementsByTagName("body")[0].style.backgroundColor = "#ff0000";
-    x.innerHTML = "¡Me has hecho clic!";
+  // código que se ejecuta al hacer clic en el elemento
+  document.getElementsByTagName("body")[0].style.backgroundColor = "#ff0000";
+  x.innerHTML = "¡Me has hecho clic!";
 });
 ```
 
@@ -402,6 +417,7 @@ En esta sesión hemos aprendido:
 **Lo más importante:**
 
 > [!IMPORTANT]
+>
 > - **Nunca uses `==` ni `!=`** — usa siempre `===` y `!==`
 > - **Nunca uses `var`** — usa `const` por defecto y `let` cuando necesites reasignar
 > - El `<script>` debe ir **al final del `<body>`** cuando necesites acceder al DOM
