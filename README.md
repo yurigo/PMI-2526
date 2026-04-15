@@ -25,6 +25,7 @@ Programación de Medios Interactivos (PMI) es una asignatura fundamental que int
 | 15  | [Sesión 15 - Responsividad en Diseño Web](./sessions/session15/)              | <ul><li>Responsividad (responsive design)</li><li>Media Queries</li><li>Breakpoints (móvil, tablet, laptop, desktop)</li><li>Sintaxis clásica (min-width / max-width)</li><li>Sintaxis moderna (width >= / width <=)</li><li>Mobile First vs Desktop First</li><li>Meta etiqueta viewport</li><li>@media print</li></ul>                                                             | [example](./sessions/session15/example/)                                                                                 |
 | 16  | [Sesión 16 - Git y GitHub](./sessions/session16/)                             | <ul><li>Árbol local vs árbol remoto en GitHub</li><li>git add .</li><li>git commit -m "mensaje"</li><li>git push</li><li>git pull</li><li>Git desde terminal y desde la UI de VSCode</li><li>Ramas: master y develop</li><li>git merge develop en master</li><li>Pull Request de develop a master</li><li>Despliegue con Vercel (CI/CD en rama master)</li></ul>                     | [example](./sessions/session16/example/)                                                                                 |
 | 17  | [Sesión 17 - Introducción a JavaScript](./sessions/session17/)                | <ul><li>Historia de JavaScript (Brendan Eich, ECMAScript)</li><li>Consola de Chrome y REPL</li><li>Tipos de datos (undefined, number, string, boolean, null, object) y typeof</li><li>Operadores booleanos (`&&`,`\|\|` , `!`) y comparadores (===, !==) (prohibido == y !=)</li><li>Operadores aritméticos (`+`, `-`, `\*`, `/`, `\*\*`, `%`) y de asignación (`+=`, `-=`, `++`, ...)</li><li>Declaración de variables (`var`, `let`, `const`) (prohibido `var`)</li><li>Estructuras de control: `if`/`else`, `switch`, `for`, `while`, `do`…`while`</li><li>Declaración e invocación de funciones</li><li>Primera toma de contacto con el DOM (`getElementById`, `addEventListener`)</li></ul> | [example](./sessions/session17/example/) |
+| 18  | [Sesión 18 - JavaScript: DOM, Arrays y forEach](./sessions/session18/)        | <ul><li>Posición correcta del `<script>`: `<head>` con `defer` (prohibido al final del `<body>` o con `DOMContentLoaded`)</li><li>`defer` vs `async`</li><li>`document.getElementById`</li><li>Atributos `style` y `classList` (`add`, `remove`, `contains`, `toggle`)</li><li>`addEventListener` y programación dirigida por eventos</li><li>Escalabilidad: por qué `getElementById` no escala</li><li>`document.getElementsByClassName` (devuelve `HTMLCollection`)</li><li>`Array.from()` para convertir colecciones en Arrays</li><li>Arrays: creación, acceso por índice, `const` con arrays</li><li>Métodos de Array: `push`, `pop`, `forEach`</li><li>Funciones callback</li><li>Patrón escalable: `Array.from` + `getElementsByClassName` + `forEach` + `addEventListener`</li></ul> | [example](./sessions/session18/example/) |
 
 ## Estructura del Repositorio
 
@@ -92,6 +93,9 @@ PMI-2526/
     └── session17/              # Introducción a JavaScript
         ├── README.md
         └── example/            # Ejemplos de tipos, operadores, variables, bucles, funciones y DOM
+    └── session18/              # JavaScript: DOM, Arrays y forEach
+        ├── README.md
+        └── example/            # Ejemplo de botones con classList.toggle, Array.from y forEach
 ```
 
 ## Herramientas
