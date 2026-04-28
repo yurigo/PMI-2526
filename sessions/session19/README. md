@@ -1,0 +1,19 @@
+Hoy se ha repasado por encima lo hecho en la sesión 18 (despues de dos semanas (fiestas por medio...))
+
+en la carpeta example/session19 se ha trabajado:
+
+getElementByID
+appendchild
+createElement
+innerText
+innerHTML
+textContent
+setTimeout
+
+con estas herramientas se ha pedido un ejercicio: temporizador
+
+en la carpeta example/temporizador está la solución discutida entre todos.
+
+se han utilizado querySelector y se ha hecho una función $ como helper del document.querySelector.
+
+Se han detectado problemas como sumas de strings (concatenaciones).  zeros a la izquierda.  contador sigue contando una vez llegado al cero...

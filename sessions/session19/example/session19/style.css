@@ -1,0 +1,17 @@
+body {
+  font-family: "Consolas", monospace;
+}
+
+.a {
+  color: red;
+}
+
+div#cuadrados > div {
+  padding: 1em;
+  background-color: salmon;
+}
+
+div#cuadrados2 > div {
+  padding: 1em;
+  background-color: lightskyblue;
+}
