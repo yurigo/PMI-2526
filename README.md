@@ -28,8 +28,9 @@ Programación de Medios Interactivos (PMI) es una asignatura fundamental que int
 | 18  | [Sesión 18 - JavaScript: DOM, Arrays y forEach](./sessions/session18/)        | <ul><li>Posición correcta del `<script>`: `<head>` con `defer` (prohibido al final del `<body>` o con `DOMContentLoaded`)</li><li>`defer` vs `async`</li><li>`document.getElementById`</li><li>Atributos `style` y `classList` (`add`, `remove`, `contains`, `toggle`)</li><li>`addEventListener` y programación dirigida por eventos</li><li>Escalabilidad: por qué `getElementById` no escala</li><li>`document.getElementsByClassName` (devuelve `HTMLCollection`)</li><li>`Array.from()` para convertir colecciones en Arrays</li><li>Arrays: creación, acceso por índice, `const` con arrays</li><li>Métodos de Array: `push`, `pop`, `forEach`</li><li>Funciones callback</li><li>Patrón escalable: `Array.from` + `getElementsByClassName` + `forEach` + `addEventListener`</li></ul> | [example](./sessions/session18/example/) |
 | 19  | [Sesión 19 - JavaScript: Contenido del DOM y Temporizadores](./sessions/session19/) | <ul><li>`textContent`, `innerText` e `innerHTML` (diferencias y cuándo usar cada uno)</li><li>`.value` para leer el contenido de un `<input>`</li><li>Múltiples `addEventListener` en el mismo elemento</li><li>Renderizado dinámico con `innerHTML` y template literals</li><li>`document.createElement` y `appendChild`</li><li>`innerHTML` vs `createElement` + `appendChild` (rendimiento, seguridad y eventos)</li><li>`setTimeout` para ejecución diferida</li><li>Patrón `setTimeout` recursivo para bucles asíncronos</li><li>`document.querySelector` con cualquier selector CSS</li><li>Función helper `$` como alias de `querySelector`</li><li>`parseInt` para evitar concatenaciones de strings</li><li>`Math.floor` y `%` para descomponer segundos en minutos y segundos</li><li>Padding de ceros con `if` o `.padStart()`</li><li>Temporizador de cuenta atrás (ejercicio práctico)</li></ul> | [session19](./sessions/session19/example/session19/), [temporizador](./sessions/session19/example/temporizador/) |
 | 20  | [Sesión 20 - JavaScript: El objeto Date y Librerías de Terceros](./sessions/session20/) | <ul><li>El objeto `Date`: `new Date()` y `new Date("YYYY-MM-DD")`</li><li>`.getTime()` — timestamps en milisegundos</li><li>Aritmética de fechas (diferencia entre timestamps)</li><li>Conversión de milisegundos → segundos → minutos → horas → días con `Math.floor` y `%`</li><li>Objetos literales como estructura de retorno de varias propiedades</li><li>Comentarios JSDoc (`@param`, `@returns`)</li><li>Patrón `setTimeout` recursivo aplicado a cuenta atrás de fecha</li><li>Librerías de terceros y CDN</li><li>Integración de la librería Confettijs</li><li>`setSeconds` / `getSeconds` para ajustar fechas en pruebas</li></ul> | [cuentaAtras](./sessions/session20/cuentaAtras/), [cuentaAtrasConConfetti](./sessions/session20/cuentaAtrasConConfetti/) |
+| 22  | [Sesión 22 - JavaScript: Promesas, fetch y async/await](./sessions/session22/) | <ul><li>Promesas y máquina de estados (`pending`, `fulfilled`, `rejected`)</li><li>`fetch` para consumir endpoints externos</li><li>Encadenado con `.then()` y manejo de errores con `.catch()`</li><li>Validación de respuestas HTTP con `response.ok`</li><li>`async/await` como syntax sugar sobre promesas</li><li>Patrones de manejo de errores con `try/catch`</li></ul> | - |
 | 23  | [Sesión 23 - Chat con Gemini desde Frontend](./sessions/session23/) | <ul><li>Formulario y evento `submit` con `preventDefault()`</li><li>`FormData` para leer el input del usuario</li><li>Renderizado dinámico con `createElement`, `innerText` y `appendChild`</li><li>Petición `fetch` `POST` a Gemini con headers y body JSON</li><li>Asincronía con `async/await`</li><li>Extracción de respuesta desde JSON (`candidates[0].content.parts[0].text`)</li><li>Riesgo de seguridad: API key expuesta en frontend</li><li>Buenas prácticas: mover claves privadas a backend/serverless</li></ul> | [chat](./sessions/session23/chat/) |
-
+  
 ## Estructura del Repositorio
 
 ```
@@ -108,9 +109,12 @@ PMI-2526/
         ├── README.md
         ├── cuentaAtras/        # Cuenta atrás hasta una fecha con Date y setTimeout recursivo
         └── cuentaAtrasConConfetti/ # Misma cuenta atrás con confeti al llegar a cero (confettijs)
+    └── session22/              # JavaScript: Promesas, fetch y async/await
+        └── README.md
     └── session23/              # Chat con Gemini desde Frontend
         ├── README.md
         └── chat/               # Chat básico con fetch a Gemini y renderizado en DOM
+
 ```
 
 ## Herramientas
@@ -574,50 +578,50 @@ PMI-2526/
 
 ### Promise ([📚](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise))
 
-- [ ] [then](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)/[catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch)
+- [x] [then](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)/[catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch)
 
-- [ ] [async](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await)
+- [x] [async](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await)
 
 ### Fetch API ([📚](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API))
 
-- [ ] then/catch
-- [ ] async/await
+- [x] then/catch
+- [x] async/await
 
 ### DOM Manipulation
 
-- [ ] getElementById
-- [ ] getElementsByClassName
+- [x] getElementById
+- [x] getElementsByClassName
 - [ ] getElementsByTagName
 - [ ] getElementsByName
-- [ ] querySelector
-- [ ] querySelectorAll
+- [x] querySelector
+- [x] querySelectorAll
 - [ ] style
-- [ ] classList
-- [ ] innerHTML
-- [ ] innerText
-- [ ] textContent
+- [x] classList
+- [x] innerHTML
+- [x] innerText
+- [x] textContent
 - [ ] getAttribute
 - [ ] setAttribute
 - [ ] removeAttribute
-- [ ] createElement
-- [ ] appendChild
+- [x] createElement
+- [x] appendChild
 - [ ] removeChild
 - [ ] replaceChild
 - [ ] insertBefore
 
 ### Event handling
 
-- [ ] click
-- [ ] submit
+- [x] click
+- [x] submit
 - [ ] change
-- [ ] keydown
+- [x] keydown
 - [ ] keyup
 - [ ] keypress
 - [ ] focus
 - [ ] blur
 - [ ] mouseover
 - [ ] mouseout
-- [ ] mousemove
+- [x] mousemove
 - [ ] mousedown
 - [ ] mouseup
 - [ ] mouseenter
@@ -629,7 +633,7 @@ PMI-2526/
 - [ ] scroll
 - [ ] resize
 - [ ] load
-- [ ] addEventListener
+- [x] addEventListener
 - [ ] removeEventListener
 
 ### Ejercicios
