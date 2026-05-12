@@ -4,251 +4,156 @@
 
 ## Contenidos de la Sesión
 
-Esta sesión se dedicó a dos partes diferenciadas. En la primera mitad se realizó una **corrección en directo de la cuenta atrás hasta una fecha** construida en las sesiones 19 y 20: se revisaron los errores más frecuentes cometidos por el alumnado, se discutieron las causas y se mostraron las correcciones. En la segunda mitad se **presentó la práctica** de la asignatura: enunciado, criterios de evaluación y recomendaciones para abordarla.
+Esta sesión se dedicó a dos partes diferenciadas. En la primera mitad se realizó una **corrección en directo de la cuenta atrás hasta una fecha** construida en las sesiones 19 y 20.
 
-No existe carpeta de ejemplos en esta sesión; el código analizado es el propio de [`session19/example/temporizador/`](../session19/example/temporizador/) y [`session20/cuentaAtras/`](../session20/cuentaAtras/).
+## Entregas
 
----
+<iframe width="100%" height="600" src="https://mybirthday-eta.vercel.app/">
+</iframe>
 
-### 1. Error más frecuente: concatenación de strings en lugar de suma
+<iframe width="100%" height="600" src="https://birthdaycountdown-lime.vercel.app/">
+</iframe>
 
-El error más repetido fue operar aritméticamente con valores de tipo **string** sin convertirlos antes a número. Como `.value` de un `<input>` devuelve siempre un string, sumar dos valores sin convertir produce concatenación:
+<iframe width="100%" height="600" src="https://arnauvavi.github.io/contadorcumple/">
+</iframe>
 
-```js
-// ❌ Incorrecto — concatena strings
-const minutos  = inputMinutos.value;   // "05" (string)
-const segundos = inputSegundos.value;  // "30" (string)
-const total    = minutos * 60 + segundos; // 300 + "30" → "30030" (¡mal!)
-```
+<iframe width="100%" height="600" src="https://temporizador-cumple.vercel.app/">
+</iframe>
 
-La solución es envolver cada lectura con `parseInt`:
+<iframe width="100%" height="600" src="https://Honza1414.github.io/interactive-media">
+</iframe>
 
-```js
-// ✅ Correcto — opera con números
-const minutos  = parseInt(inputMinutos.value,  10); // 5  (number)
-const segundos = parseInt(inputSegundos.value, 10); // 30 (number)
-const total    = minutos * 60 + segundos;           // 330 (number)
-```
+<iframe width="100%" height="600" src="https://joeltempest56.github.io/Mi-cumplea-os/">
+</iframe>
 
-> [!IMPORTANT]
-> **`.value` siempre devuelve un string**, incluso cuando el `<input>` es de tipo `number`. Usa `parseInt(valor, 10)` para convertirlo a entero antes de cualquier operación aritmética. El segundo argumento `10` indica la base decimal y es una buena práctica incluirlo siempre.
+<iframe width="100%" height="600" src="https://pmicumplejordicarrasco.vercel.app/">
+</iframe>
 
----
+<iframe width="100%" height="600" src="https://cuenta-atras-kohl.vercel.app/">
+</iframe>
 
-### 2. Error: decimales en la pantalla por olvidar `Math.floor`
+<iframe width="100%" height="600" src="https://birthday-countdown-alpha-umber.vercel.app/">
+</iframe>
 
-Al dividir el total de segundos entre 60 para obtener minutos, el resultado puede tener decimales. Sin `Math.floor`, estos decimales aparecen directamente en pantalla:
+# Presentació de la Pràctica
 
-```js
-// ❌ Incorrecto
-let minutos  = cuentaAtras / 60;   // 5.5 → "5.5" en pantalla
-let segundos = cuentaAtras % 60;   // correcto, pero la parte de arriba falla
-```
+## TripPlanner+
 
-```js
-// ✅ Correcto
-let minutos  = Math.floor(cuentaAtras / 60); // 5 → "5" en pantalla
-let segundos = cuentaAtras % 60;             // 30
-```
+### Objetivo General
 
-> [!NOTE]
-> `Math.floor` redondea **hacia abajo** al entero más cercano (`Math.floor(5.9) === 5`). Es exactamente lo que se necesita para extraer la cantidad entera de minutos (o de horas, o de días) que caben en un número de segundos totales.
+Desarrollar **TripPlanner+**, una plataforma web interactiva y moderna para la planificación personalizada de viajes.
+
+Esta aplicación permitirá a los usuarios crear y gestionar sus viajes, añadiendo actividades por días y consultando información meteorológica actualizada.
+
+TripPlanner+ buscará proporcionar una experiencia de usuario fluida y eficiente, simulando características comunes de aplicaciones de planificación de viajes.
 
 ---
 
-### 3. Error: mostrar `"5"` en lugar de `"05"` (padding de ceros)
+### Descripción del Proyecto
 
-Los números menores de 10 se mostraban sin el cero de relleno, lo que da un aspecto poco profesional al contador.
+TripPlanner+ será una aplicación web dinámica que simulará un entorno de planificación de viajes.
 
-```
-// ❌ Resultado en pantalla:  5:7
-// ✅ Resultado esperado:     05:07
-```
+Los usuarios podrán crear viajes, añadir actividades o puntos de interés, y consultar el tiempo de su destino en tiempo real.
 
-Hay dos formas de añadir el cero a la izquierda:
-
-```js
-// Opción A — con if (enfoque visto en sesiones anteriores)
-if (minutos < 10) minutos = "0" + minutos;
-if (segundos < 10) segundos = "0" + segundos;
-
-// Opción B — con .padStart() (más conciso)
-minutos  = String(minutos).padStart(2, "0");
-segundos = String(segundos).padStart(2, "0");
-```
-
-> [!TIP]
-> `String.padStart(longitud, caracterDeRelleno)` completa un string por la izquierda hasta alcanzar la longitud indicada. Es la forma moderna y recomendada de hacer padding de ceros.
+La aplicación también ofrecerá visualizaciones atractivas y una interfaz intuitiva para facilitar la gestión y consulta de viajes.
 
 ---
 
-### 4. Error: posición del `<script>` en el HTML
+### Requisitos
 
-Varios alumnos colocaban el `<script>` al **final del `<body>`** en lugar de en el `<head>` con el atributo `defer`:
+#### 1. Interfaz de Usuario
 
-```html
-<!-- ❌ Incorrecto — al final del body -->
-<body>
-  <!-- contenido -->
-  <script src="index.js"></script>
-</body>
-```
+- Desarrollar una interfaz responsiva y visualmente atractiva que sea intuitiva y fácil de usar.
+- Implementar interacciones dinámicas utilizando JavaScript para mejorar la experiencia del usuario, como menús desplegables, diálogos modales y formularios interactivos.
 
-```html
-<!-- ✅ Correcto — en el <head> con defer -->
-<head>
-  <script src="index.js" defer></script>
-</head>
-```
+#### 2. Funcionalidades de la Aplicación
 
-> [!IMPORTANT]
-> Tal como se explicó en la sesión 18, el `<script>` debe ir **siempre en el `<head>` con `defer`**. El atributo `defer` garantiza que el script se descarga en paralelo con el HTML y se ejecuta solo cuando todo el DOM ha sido construido. Poner el `<script>` al final del `<body>` es un patrón obsoleto que surgió como workaround antes de que `defer` existiera en todos los navegadores.
+- **Creación y gestión de viajes:** Permitir a los usuarios crear nuevos viajes con información básica (nombre, fechas, origen, destino).
+- **Actividades dentro del viaje:** Posibilidad de añadir, editar o eliminar actividades asociadas a un viaje concreto (título, descripción, hora o día).
+- **Consulta del tiempo:** Para garantizar la coherencia entre todos los proyectos, se deberá utilizar la API pública de OpenWeatherMap (versión gratuita) para todas las consultas meteorológicas. No se permite utilizar otros servicios o APIs alternativas.
+- **Sugerencias de viaje:** Implementar una función de sugerencias para que los usuarios puedan interactuar con una IA (Gemini) y que esta dé sugerencias de viaje.
+
+#### 3. Requisitos Técnicos
+
+- El desarrollo de la práctica se debe realizar utilizando **vanilla HTML, CSS y vanilla JavaScript** (sin ningún framework o librería externa).
+- Se permite el uso opcional de frameworks CSS para mejorar el diseño y la responsividad, como Bootstrap o TailwindCSS.
+- **No se permite** el uso de frameworks de JavaScript como React, Vue, Angular...
 
 ---
 
-### 5. Error: no llamar a la función inmediatamente al cargar
+### Descripción Detallada de las Páginas y Funcionalidades
 
-En el patrón de `setTimeout` recursivo, si no se invoca la función principal al arrancar la página, el contador tarda **un segundo entero** en mostrarse por primera vez. Esto crea un efecto desagradable donde el usuario ve la pantalla vacía brevemente.
+#### Página Principal (Home)
 
-```js
-// ❌ Incorrecto — espera 1 segundo antes del primer tick
-setTimeout(handleTimeout, 1000);
+**Objetivo:** Dar la bienvenida a los usuarios y explicar las ventajas de utilizar TripPlanner+.
 
-function handleTimeout() {
-  // actualiza el DOM
-  setTimeout(handleTimeout, 1000);
-}
-```
+**Contenidos:**
 
-```js
-// ✅ Correcto — se muestra inmediatamente al cargar
-handleTimeout(); // llamada inicial sin espera
-
-function handleTimeout() {
-  // actualiza el DOM
-  setTimeout(handleTimeout, 1000);
-}
-```
-
-> [!NOTE]
-> La llamada inicial `handleTimeout()` fuera de cualquier temporizador hace que el DOM se actualice en el momento en que se ejecuta el script, sin esperar el primer intervalo de un segundo.
+- **Mensaje de Bienvenida:** Breve introducción a la plataforma.
+- **Descripción de Características:** Enumeración de las principales funcionalidades como la gestión de viajes, consulta del tiempo y sistema de sugerencias.
 
 ---
 
-### 6. Buenas prácticas reforzadas
+#### Pantalla de Viajes
 
-Durante la corrección se recordaron varias buenas prácticas generales de JavaScript:
+**Objetivo:** Permitir la visualización y gestión de los viajes creados.
 
-#### `const` y `let`, nunca `var`
+**Funcionalidades:**
 
-```js
-// ❌ Prohibido
-var contador = 0;
-
-// ✅ Correcto
-let contador  = 0;    // para valores que van a cambiar
-const LIMITE  = 60;   // para valores constantes (SCREAMING_SNAKE_CASE)
-```
-
-#### Constantes con nombre para valores mágicos
-
-Es mejor nombrar los valores fijos con una constante descriptiva que escribirlos directamente en el código:
-
-```js
-// ❌ Difícil de entender
-setTimeout(handleTimeout, 1000);
-
-// ✅ Más legible
-const UN_SEGUNDO_EN_MS = 1000;
-setTimeout(handleTimeout, UN_SEGUNDO_EN_MS);
-```
-
-#### Nombres descriptivos para las variables
-
-```js
-// ❌ Difícil de razonar
-const x = new Date().getTime();
-
-// ✅ Mucho más claro
-const timestampDeHoy = new Date().getTime();
-```
-
-> [!TIP]
-> Un buen nombre de variable hace que el código se lea casi como prosa. Si necesitas un comentario para explicar qué es `x`, el problema es el nombre de la variable, no la falta del comentario.
+- Listado de viajes guardados.
+- Formulario para añadir nuevos viajes (nombre, fechas, destino).
+- Posibilidad de ver, editar o eliminar viajes.
+- Por cada viaje, posibilidad de añadir actividades diarias.
+- Los datos se deben guardar automáticamente para que se mantengan después de cerrar el navegador.
 
 ---
 
-### 7. Repaso del patrón completo de la cuenta atrás
+#### Pantalla de Clima
 
-Como cierre de la corrección, se repasó el flujo completo de la cuenta atrás hasta una fecha, identificando las responsabilidades de cada función:
+**Objetivo:** Mostrar información meteorológica del destino seleccionado.
 
-```
-                  ┌─────────────────────────────────────────────┐
-                  │              handleTimeout()                 │
-                  │  1. Calcula los segundos restantes           │
-                  │  2. Convierte a días/horas/minutos/segundos  │
-                  │  3. Actualiza el DOM                         │
-                  │  4. Se vuelve a llamar en 1 segundo          │
-                  └─────────────────────────────────────────────┘
-                        │               │              │
-              calculaLosSegundos()   conversor()    printar()
-              (Date + getTime)       (Math.floor    (getElementById
-                                      + %)          + innerText)
-```
+**Funcionalidades:**
 
-Cada función tiene **una sola responsabilidad** (*single responsibility principle*): calcular, convertir o mostrar. Esta separación facilita la lectura y la depuración.
-
-> [!TIP]
-> Si una función necesita un nombre muy largo para describir todo lo que hace (p. ej. `calculaYConvierteyMuestraLaCuentaAtras`), es señal de que debería dividirse en funciones más pequeñas.
+- Consulta de datos mediante una API pública de meteorología.
+- Mostrar temperatura actual, estado del cielo, icono y fecha.
+- Opcionalmente, mostrar también la previsión de los próximos días.
 
 ---
 
-### 8. Presentación de la Práctica
+#### Página Sobre Nosotros (About Us)
 
-En la segunda parte de la sesión se presentó el **enunciado de la práctica** de la asignatura. Se explicaron los criterios de evaluación y las recomendaciones para abordarla con éxito.
+**Objetivo:** Informar a los usuarios sobre los creadores del proyecto y su misión.
 
-Las recomendaciones generales que se dieron fueron:
+**Contenidos:**
 
-- **Planificar antes de escribir código**: bosquejar la estructura HTML, los estilos CSS y la lógica JavaScript antes de abrir el editor.
-- **Ir paso a paso**: hacer que algo pequeño funcione antes de añadir más funcionalidad.
-- **Usar el inspector del navegador** (DevTools → consola, elementos, red) para depurar.
-- **Hacer commits frecuentes** con mensajes descriptivos para poder revertir cambios si algo falla.
-- **No copiar código sin entenderlo**: el examen requerirá razonar sobre el código entregado.
-
-> [!IMPORTANT]
-> La práctica debe ser **trabajo propio**. Usar código de otros alumnos o generado íntegramente por IA sin comprenderlo se considera deshonestidad académica y puede suponer suspenso directo.
+- **Información del Equipo:** Breves biografías o descripciones del equipo detrás de TripPlanner+.
+- **Misión y Visión:** Explicación de los objetivos y aspiraciones del proyecto.
+- **Contacto:** Información de contacto o formulario para enviar mensajes al equipo de TripPlanner+ con campos como Nombre, Apellidos, Email, Mensaje…
+- Cuando el usuario rellene el formulario de contacto, debe llegar un correo al equipo de TripPlanner+ y otro al cliente que ha escrito el mensaje indicándole que se han recibido sus consultas y que el equipo las responderá lo antes posible.
+- Para realizar el envío de mails, se propone hacerlo a través de la **API REST de EmailJS** haciendo uso de FETCH/AJAX/Axios o similar, pero queda **estrictamente prohibido** usar su SDK.
 
 ---
 
-## Resumen
+#### Sistema de Sugerencias IA
 
-En esta sesión hemos repasado y reforzado:
+**Objetivo:** Simular un sistema para permitir a los usuarios obtener sugerencias sobre nuevos viajes.
 
-- ✅ **`parseInt(valor, 10)`** — convertir strings a enteros antes de operar aritméticamente
-- ✅ **`Math.floor`** — eliminar los decimales al calcular minutos y segundos
-- ✅ **Padding de ceros** — usar `.padStart(2, "0")` para mostrar `"05"` en lugar de `"5"`
-- ✅ **Posición del `<script>`** — siempre en `<head>` con `defer`, nunca al final del `<body>`
-- ✅ **Llamada inicial en `setTimeout` recursivo** — invocar la función al cargar para evitar el retraso de un segundo
-- ✅ **`const` / `let`** — nunca `var`; usar constantes con nombre para los valores fijos
-- ✅ **Nombres descriptivos** — variables y funciones que explican su propósito sin necesidad de comentarios
-- ✅ **Separación de responsabilidades** — cada función hace una sola cosa
+**Funcionalidades:**
 
-**Lo más importante:**
+- **Interfaz de Sugerencias:** Área de mensajes donde los usuarios pueden escribir y enviar mensajes.
+- **Respuestas Automáticas:** Implementación de respuestas automáticas utilizando la **API de Gemini de Google**.
+- **Formato de Chat Realista:** Diseño que emula aplicaciones de chat reales, con mensajes entrantes y salientes claramente diferenciados.
+- La funcionalidad de sugerencias IA se debe implementar obligatoriamente utilizando la API de Gemini de Google. Esta solo se utilizará para generar ideas o sugerencias de destinos o actividades de viaje, sin funciones adicionales de análisis o recomendaciones personalizadas avanzadas.
 
-> [!IMPORTANT]
->
-> - **`.value` siempre es un string** — usa `parseInt(..., 10)` antes de cualquier cálculo numérico
-> - **`Math.floor` es obligatorio** al convertir segundos a minutos (o minutos a horas) para evitar decimales
-> - **El `<script>` va en el `<head>` con `defer`** — no al final del `<body>`
-> - **Llama la función inmediatamente** además de programar el primer `setTimeout`, para que el DOM se actualice al instante
+> En la sesión 23 se proporcionará un ejemplo de cómo integrar la API de Gemini de Google para generar respuestas automáticas a partir de las preguntas o mensajes enviados por los usuarios en el sistema de sugerencias IA.
 
-## Recursos Adicionales
+---
 
-- [MDN - `parseInt`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
-- [MDN - `Math.floor`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)
-- [MDN - `String.prototype.padStart`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/padStart)
-- [MDN - `defer`](https://developer.mozilla.org/es/docs/Web/HTML/Element/script#defer)
-- [MDN - `setTimeout`](https://developer.mozilla.org/es/docs/Web/API/setTimeout)
-- [MDN - `Date`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Date)
-- [javascript.info - Tipos de datos: números](https://es.javascript.info/number)
-- [javascript.info - setTimeout y setInterval](https://es.javascript.info/settimeout-setinterval)
+#### Gestión y Persistencia de Datos
+
+**Objetivo:** Garantizar que los datos del viaje y las actividades se mantengan disponibles después de cerrar el navegador.
+
+**Tecnología a utilizar:** Se hará uso de **LocalStorage**, que permite almacenar información de forma persistente en el navegador del usuario.
+
+- Todos los datos (viajes, actividades, etc.) se deben guardar exclusivamente en el LocalStorage del navegador.
+- **No se permite** el uso de bases de datos remotas, ni ningún tipo de backend o servidor para la persistencia.
