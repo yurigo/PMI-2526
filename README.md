@@ -117,6 +117,9 @@ PMI-2526/
     └── session23/              # Chat con Gemini desde Frontend
         ├── README.md
         └── chat/               # Chat básico con fetch a Gemini y renderizado en DOM
+    └── session24/              # Propagación de Eventos: bubbling, stopPropagation y stopImmediatePropagation
+        ├── README.md
+        └── bubbling/           # Ejemplo de event bubbling con stopPropagation y stopImmediatePropagation
 
 ```
 
